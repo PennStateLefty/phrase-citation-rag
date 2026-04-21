@@ -64,6 +64,15 @@ def test_get_binding_synth_gt_and_judge_passthrough():
     assert jg.model_identity == "phi-4"
 
 
+def test_foundry_project_endpoint_is_rewritten_to_models():
+    cfg = _cfg(
+        synth_gt_endpoint="https://acct.services.ai.azure.com/api/projects/sentcite",
+        judge_endpoint="https://acct.services.ai.azure.com/",
+    )
+    assert get_binding("synth_gt", cfg).endpoint == "https://acct.services.ai.azure.com/models"
+    assert get_binding("judge", cfg).endpoint == "https://acct.services.ai.azure.com/models"
+
+
 def test_synth_gt_missing_endpoint_raises():
     cfg = _cfg(synth_gt_endpoint="")
     with pytest.raises(RuntimeError, match="synth_gt role requires"):

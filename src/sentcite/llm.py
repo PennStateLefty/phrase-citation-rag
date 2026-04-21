@@ -85,6 +85,31 @@ def _rag_binding(cfg: AzureConfig) -> RoleBinding:
     )
 
 
+def _normalize_foundry_endpoint(endpoint: str) -> str:
+    """Coerce a Foundry endpoint into the /models inference path.
+
+    The Foundry portal surfaces a few different endpoint strings depending
+    on where the user copies from:
+
+    * ``https://<acct>.services.ai.azure.com/models`` — what
+      azure-ai-inference ChatCompletionsClient actually wants. Pass-through.
+    * ``https://<acct>.services.ai.azure.com/api/projects/<proj>`` — the
+      *project control-plane* path used by azure-ai-projects. Hitting
+      ChatCompletionsClient with this shape produces a 401 at the gateway.
+      We rewrite it to ``/models``.
+    * ``https://<acct>.services.ai.azure.com`` or trailing slash — append
+      ``/models``.
+    * Anything else (legacy per-deployment MaaS URLs, custom domains) is
+      passed through unchanged.
+    """
+    ep = endpoint.rstrip("/")
+    if "/api/projects/" in ep:
+        ep = ep.split("/api/projects/", 1)[0] + "/models"
+    elif ep.endswith(".services.ai.azure.com"):
+        ep = ep + "/models"
+    return ep
+
+
 def _synth_gt_binding(cfg: AzureConfig) -> RoleBinding:
     if not cfg.synth_gt_endpoint:
         raise RuntimeError(
@@ -100,7 +125,7 @@ def _synth_gt_binding(cfg: AzureConfig) -> RoleBinding:
         )
     return RoleBinding(
         role="synth_gt",
-        endpoint=cfg.synth_gt_endpoint.rstrip("/"),
+        endpoint=_normalize_foundry_endpoint(cfg.synth_gt_endpoint),
         deployment=cfg.synth_gt_deployment,
         model_identity=ident,
     )
@@ -120,7 +145,7 @@ def _judge_binding(cfg: AzureConfig) -> RoleBinding:
         )
     return RoleBinding(
         role="judge",
-        endpoint=cfg.judge_endpoint.rstrip("/"),
+        endpoint=_normalize_foundry_endpoint(cfg.judge_endpoint),
         deployment=cfg.judge_deployment,
         model_identity=ident,
     )
