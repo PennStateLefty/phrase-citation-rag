@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data (large / not for VC)
+data/raw_pdfs/*
+!data/raw_pdfs/MANIFEST.md
+!data/raw_pdfs/.gitkeep
+data/parsed/*
+!data/parsed/.gitkeep
+data/chunks/*
+!data/chunks/.gitkeep
+data/ground_truth/results/*
+!data/ground_truth/results/.gitkeep
+
+# Local artifacts
+.DS_Store
+*.log
+dist/
+build/
