@@ -102,7 +102,7 @@ def test_chunk_document_sentence_ids_are_doc_scoped_and_stable():
     ]
     chunks = chunk_document("doc1", _layout(paragraphs))
     ids = [s.sentence_id for c in chunks for s in c.sentences]
-    assert all(i.startswith("doc1::s") for i in ids)
+    assert all(i.startswith("doc1-s") for i in ids)
     assert len(set(ids)) == len(ids) == 5
 
 
@@ -130,8 +130,8 @@ def test_chunk_ids_are_zero_padded_four_digits():
         _para("Only sentence here."),
     ]
     chunks = chunk_document("pub17", _layout(paragraphs))
-    assert chunks[0].chunk_id == "pub17::c0000"
-    assert chunks[0].sentences[0].sentence_id == "pub17::s00000"
+    assert chunks[0].chunk_id == "pub17-c0000"
+    assert chunks[0].sentences[0].sentence_id == "pub17-s00000"
 
 
 def test_count_tokens_nonzero():

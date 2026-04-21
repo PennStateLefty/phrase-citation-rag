@@ -6,10 +6,12 @@ document-scoped ``sentence_id``s and char offsets that round-trip against
 the chunk's own ``text`` (i.e. ``chunk.text[s.char_start:s.char_end]`` is
 exactly ``s.text``).
 
-ID scheme (document-scoped so sentence_ids survive chunk re-splitting):
+ID scheme (document-scoped so sentence_ids survive chunk re-splitting;
+separator is ``-`` so IDs are usable as Azure AI Search document keys
+without escaping):
 
-* ``chunk_id``    ``{document_id}::c{chunk_idx:04d}``
-* ``sentence_id`` ``{document_id}::s{global_sent_idx:05d}``
+* ``chunk_id``    ``{document_id}-c{chunk_idx:04d}``
+* ``sentence_id`` ``{document_id}-s{global_sent_idx:05d}``
 
 Chunking policy:
 
@@ -179,7 +181,7 @@ def _assemble_chunks(
 
 
 def _build_chunk(document_id: str, chunk_idx: int, sents: list[_SentRec]) -> Chunk:
-    chunk_id = f"{document_id}::c{chunk_idx:04d}"
+    chunk_id = f"{document_id}-c{chunk_idx:04d}"
     parts: list[str] = []
     sentence_records: list[Sentence] = []
     cursor = 0
@@ -192,7 +194,7 @@ def _build_chunk(document_id: str, chunk_idx: int, sents: list[_SentRec]) -> Chu
         cursor += len(s.text)
         sentence_records.append(
             Sentence(
-                sentence_id=f"{document_id}::s{s.idx:05d}",
+                sentence_id=f"{document_id}-s{s.idx:05d}",
                 chunk_id=chunk_id,
                 document_id=document_id,
                 text=s.text,
