@@ -12,6 +12,7 @@ dependencies = [
   "azure-ai-documentintelligence>=1.0.0",
   "azure-search-documents>=11.6.0b4",
   "openai>=1.40",
+  "azure-ai-inference>=1.0.0b9",
   "spacy>=3.7",
   "numpy>=1.26",
   "scikit-learn>=1.4",
