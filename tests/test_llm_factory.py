@@ -16,13 +16,13 @@ def _cfg(**overrides: str) -> AzureConfig:
         search_endpoint="https://s", search_api_key="sk",
         search_index_chunks="c", search_index_sentences="z",
         foundry_name="fn", foundry_endpoint="https://foundry",
-        foundry_api_key="fk", foundry_project_name="p",
+        foundry_api_key="", foundry_project_name="p",
         foundry_project_endpoint="https://proj",
         openai_api_version="v", openai_chat_deployment="gpt-4o",
         openai_embedding_deployment="emb",
-        synth_gt_endpoint="https://synth", synth_gt_api_key="sgk",
+        synth_gt_endpoint="https://synth", synth_gt_api_key="",
         synth_gt_deployment="llama-dep", synth_gt_model="Meta-Llama-3.3-70B-Instruct",
-        judge_endpoint="https://judge", judge_api_key="jk",
+        judge_endpoint="https://judge", judge_api_key="",
         judge_deployment="phi-dep", judge_model="Phi-4",
     )
     base.update(overrides)
@@ -65,7 +65,7 @@ def test_get_binding_synth_gt_and_judge_passthrough():
 
 
 def test_synth_gt_missing_endpoint_raises():
-    cfg = _cfg(synth_gt_endpoint="", synth_gt_api_key="")
+    cfg = _cfg(synth_gt_endpoint="")
     with pytest.raises(RuntimeError, match="synth_gt role requires"):
         get_binding("synth_gt", cfg)
 
