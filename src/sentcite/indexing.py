@@ -71,6 +71,9 @@ DEFAULT_SEMANTIC_CONFIG_NAME = "default"
 DEFAULT_VECTOR_PROFILE_NAME = "chunk-vector-profile"
 DEFAULT_HNSW_CONFIG_NAME = "chunk-vector-hnsw"
 
+SENT_VECTOR_PROFILE_NAME = "sentence-vector-profile"
+SENT_HNSW_CONFIG_NAME = "sentence-vector-hnsw"
+
 
 _CREDENTIAL: TokenCredential | None = None
 
@@ -173,6 +176,92 @@ def build_chunks_index(name: str, *, dimensions: int = EMBEDDING_DIMENSIONS) -> 
         vector_search=vector_search,
         semantic_search=semantic,
     )
+
+
+def build_sentences_index(name: str, *, dimensions: int = EMBEDDING_DIMENSIONS) -> SearchIndex:
+    """Return the Layout Y per-sentence index definition.
+
+    One document per sentence. ``sentence_id`` is the key. Each doc carries
+    its parent ``chunk_id`` / ``document_id`` / ``page`` / ``section_path``
+    so retrieved sentences can be expanded back to chunk context for
+    generation while the sentence itself is the citation target.
+    """
+    fields: list = [
+        SimpleField(name="sentence_id", type=SearchFieldDataType.String, key=True, filterable=True),
+        SimpleField(name="chunk_id", type=SearchFieldDataType.String, filterable=True),
+        SimpleField(name="document_id", type=SearchFieldDataType.String, filterable=True, facetable=True, sortable=True),
+        SimpleField(name="page", type=SearchFieldDataType.Int32, filterable=True, sortable=True, facetable=True),
+        SimpleField(
+            name="section_path",
+            type=SearchFieldDataType.Collection(SearchFieldDataType.String),
+            filterable=True,
+            facetable=True,
+        ),
+        SearchableField(name="text", type=SearchFieldDataType.String, analyzer_name="en.lucene"),
+        SimpleField(name="token_count", type=SearchFieldDataType.Int32, filterable=False, sortable=True),
+        SearchField(
+            name="sentence_vector",
+            type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
+            searchable=True,
+            vector_search_dimensions=dimensions,
+            vector_search_profile_name=SENT_VECTOR_PROFILE_NAME,
+            hidden=False,
+        ),
+    ]
+
+    vector_search = VectorSearch(
+        algorithms=[
+            HnswAlgorithmConfiguration(
+                name=SENT_HNSW_CONFIG_NAME,
+                kind=VectorSearchAlgorithmKind.HNSW,
+                parameters=HnswParameters(
+                    m=4, ef_construction=400, ef_search=500,
+                    metric=VectorSearchAlgorithmMetric.COSINE,
+                ),
+            )
+        ],
+        profiles=[
+            VectorSearchProfile(
+                name=SENT_VECTOR_PROFILE_NAME,
+                algorithm_configuration_name=SENT_HNSW_CONFIG_NAME,
+            )
+        ],
+    )
+
+    semantic = SemanticSearch(
+        configurations=[
+            SemanticConfiguration(
+                name=DEFAULT_SEMANTIC_CONFIG_NAME,
+                prioritized_fields=SemanticPrioritizedFields(
+                    content_fields=[SemanticField(field_name="text")],
+                    keywords_fields=[SemanticField(field_name="section_path")],
+                ),
+            )
+        ]
+    )
+
+    return SearchIndex(
+        name=name,
+        fields=fields,
+        vector_search=vector_search,
+        semantic_search=semantic,
+    )
+
+
+def ensure_sentences_index(cfg: AzureConfig | None = None, *, recreate: bool = False) -> str:
+    cfg = cfg or AzureConfig.from_env()
+    if not cfg.search_endpoint:
+        raise RuntimeError("AZURE_SEARCH_ENDPOINT is required for indexing.")
+    idx_client = SearchIndexClient(endpoint=cfg.search_endpoint, credential=_credential())
+    name = cfg.search_index_sentences
+    index = build_sentences_index(name)
+    if recreate:
+        try:
+            idx_client.delete_index(name)
+        except Exception:  # noqa: BLE001
+            pass
+    idx_client.create_or_update_index(index)
+    return name
 
 
 def ensure_chunks_index(cfg: AzureConfig | None = None, *, recreate: bool = False) -> str:
@@ -301,6 +390,91 @@ def upload_chunks(
         client.upload_documents(documents=docs)
         total_sentences += sum(len(c.sentences) for c in batch_chunks)
     return {"chunks": len(chunks), "sentences": total_sentences}
+
+
+def _sentences_client(cfg: AzureConfig) -> SearchClient:
+    return SearchClient(
+        endpoint=cfg.search_endpoint,
+        index_name=cfg.search_index_sentences,
+        credential=_credential(),
+    )
+
+
+def sentence_to_search_doc(
+    sentence,
+    *,
+    embedding: list[float],
+    token_count: int,
+) -> dict:
+    return {
+        "sentence_id": sentence.sentence_id,
+        "chunk_id": sentence.chunk_id,
+        "document_id": sentence.document_id,
+        "page": sentence.page,
+        "section_path": list(sentence.section_path),
+        "text": sentence.text,
+        "token_count": token_count,
+        "sentence_vector": embedding,
+    }
+
+
+def _unique_sentences(chunks: Iterable[Chunk]):
+    """Yield sentences unique by ``sentence_id``.
+
+    Sentences at chunk overlap boundaries legitimately appear in two chunks
+    with the same ``sentence_id`` but different ``chunk_id`` / char offsets.
+    For the sentence index we want one doc per sentence — keep the first
+    occurrence (parent ``chunk_id`` is arbitrary but stable).
+    """
+    seen: set[str] = set()
+    for c in chunks:
+        for s in c.sentences:
+            if s.sentence_id in seen:
+                continue
+            seen.add(s.sentence_id)
+            yield s
+
+
+def _estimate_tokens(text: str) -> int:
+    try:
+        import tiktoken
+
+        enc = tiktoken.get_encoding("cl100k_base")
+        return len(enc.encode(text))
+    except Exception:  # noqa: BLE001
+        return max(1, len(text) // 4)
+
+
+def upload_sentences(
+    chunks: Iterable[Chunk],
+    *,
+    cfg: AzureConfig | None = None,
+    batch_size: int = 200,
+    embed_batch_size: int = 64,
+) -> dict[str, int]:
+    """Embed each unique sentence and upload to the sentences index."""
+    cfg = cfg or AzureConfig.from_env()
+    sents = list(_unique_sentences(chunks))
+    if not sents:
+        return {"sentences": 0}
+    texts = [s.text for s in sents]
+    vectors = embed_texts(texts, cfg=cfg, batch_size=embed_batch_size)
+    if len(vectors) != len(sents):
+        raise RuntimeError(
+            f"Embedding count mismatch: got {len(vectors)} vectors for {len(sents)} sentences."
+        )
+    token_counts = [_estimate_tokens(t) for t in texts]
+    client = _sentences_client(cfg)
+    for i in range(0, len(sents), batch_size):
+        batch = sents[i : i + batch_size]
+        batch_vecs = vectors[i : i + batch_size]
+        batch_tc = token_counts[i : i + batch_size]
+        docs = [
+            sentence_to_search_doc(s, embedding=v, token_count=tc)
+            for s, v, tc in zip(batch, batch_vecs, batch_tc)
+        ]
+        client.upload_documents(documents=docs)
+    return {"sentences": len(sents)}
 
 
 def load_chunks_from_jsonl(path: Path) -> list[Chunk]:

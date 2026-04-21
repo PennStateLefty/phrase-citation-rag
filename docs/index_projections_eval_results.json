@@ -1,0 +1,2833 @@
+{
+  "top_k": 10,
+  "queries": [
+    {
+      "query": "What records must a small business keep for tax purposes?",
+      "layout_x": {
+        "latency_ms": 1258.048832998611,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_583-c0042",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Kinds of Records To Keep"
+            ],
+            "score": 0.03279569745063782,
+            "reranker": 3.010236978530884,
+            "sentence_count": 19,
+            "preview": "Except in a few cases, the law does not require any spe- cific kind of records. You can choose any recordkeeping system suited to your business that clearly sho"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0041",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Why Keep Records?"
+            ],
+            "score": 0.03128054738044739,
+            "reranker": 2.740840435028076,
+            "sentence_count": 28,
+            "preview": "Everyone in business must keep records. Good records will help you do the following. Monitor the progress of your business. You need good records to monitor the"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0045",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.03125763311982155,
+            "reranker": 2.7316243648529053,
+            "sentence_count": 47,
+            "preview": "Documents for expenses include the following. \u00b7 Canceled checks. \u00b7 Cash register tapes. \u00b7 Account statements. \u00b7 Credit card sales slips. \u00b7 Invoices. . Petty cas"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0044",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.022244691848754883,
+            "reranker": 2.7025578022003174,
+            "sentence_count": 37,
+            "preview": "Purchases, sales, payroll, and other transactions you have in your business generate supporting documents. Sup- porting documents include sales slips, paid bill"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0047",
+            "document_id": "irs_pub_583",
+            "page": 13,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Recording Business Transactions"
+            ],
+            "score": 0.025166191160678864,
+            "reranker": 2.6373355388641357,
+            "sentence_count": 30,
+            "preview": "A good recordkeeping system includes a summary of your business transactions. ( Your business transactions are shown on the supporting documents just discussed."
+          },
+          {
+            "chunk_id": "irs_pub_334-c0056",
+            "document_id": "irs_pub_334",
+            "page": 14,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Cash Method"
+            ],
+            "score": 0.013513513840734959,
+            "reranker": 2.6316640377044678,
+            "sentence_count": 3,
+            "preview": "Most individuals and many sole proprietors with no inven- tory use the cash method because they find it easier to keep cash method records. However, if an inven"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0071",
+            "document_id": "irs_pub_587",
+            "page": 18,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Recordkeeping"
+            ],
+            "score": 0.028068138286471367,
+            "reranker": 2.608978033065796,
+            "sentence_count": 20,
+            "preview": "You do not have to use a particular method of re- cordkeeping, but you must keep records that pro- RECORDS vide the information needed to figure your deduc- tio"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0053",
+            "document_id": "irs_pub_583",
+            "page": 15,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation \u2014 Bookkeeping System",
+              "Computerized System"
+            ],
+            "score": 0.02169863134622574,
+            "reranker": 2.567150592803955,
+            "sentence_count": 37,
+            "preview": "There are computer software packages you can use for recordkeeping. They can be purchased over the Internet and in many retail stores. These packages are very h"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0250",
+            "document_id": "irs_pub_946",
+            "page": 63,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Elements of expenditure or use. Your records or other documentary evidence must support all the following."
+            ],
+            "score": 0.025487013161182404,
+            "reranker": 2.550136089324951,
+            "sentence_count": 22,
+            "preview": "\u00b7 The amount of each separate expenditure, such as the cost of acquiring the item, maintenance and repair costs, capital improvement costs, lease payments, and "
+          },
+          {
+            "chunk_id": "irs_pub_946-c0015",
+            "document_id": "irs_pub_946",
+            "page": 4,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Property Used in Your Business or Income-Producing Activity"
+            ],
+            "score": 0.015625,
+            "reranker": 2.5465915203094482,
+            "sentence_count": 24,
+            "preview": "To claim depreciation on property, you must use it in your business or income-producing activity. If you use property to produce income (investment use), the in"
+          }
+        ],
+        "candidate_sentences": 267
+      },
+      "layout_y": {
+        "latency_ms": 1210.2598329656757,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_542-s00540",
+            "chunk_id": "irs_pub_542-c0032",
+            "document_id": "irs_pub_542",
+            "page": 9,
+            "section_path": [
+              "Recordkeeping"
+            ],
+            "score": 0.013391704298555851,
+            "reranker": 2.6238656044006348,
+            "text": "Usually records that support items of income, deductions, or credits on the return must be kept for 3 years from the date the return is due or filed, whichever is later."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00829",
+            "chunk_id": "irs_pub_583-c0044",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.013246187940239906,
+            "reranker": 2.594090223312378,
+            "text": "It is important to keep these documents because they support the entries in your books and on your tax return."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00796",
+            "chunk_id": "irs_pub_583-c0041",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Why Keep Records?"
+            ],
+            "score": 0.019852472469210625,
+            "reranker": 2.5239055156707764,
+            "text": "You must keep your business records available at all times for inspection by the IRS."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00378",
+            "chunk_id": "irs_pub_583-c0016",
+            "document_id": "irs_pub_583",
+            "page": 5,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Choosing an Accounting Method"
+            ],
+            "score": 0.018626704812049866,
+            "reranker": 2.4969656467437744,
+            "text": "You must keep a complete and sepa- rate set of books and records for each business."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00878",
+            "chunk_id": "irs_pub_583-c0045",
+            "document_id": "irs_pub_583",
+            "page": 13,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.022677309811115265,
+            "reranker": 2.425363063812256,
+            "text": "You must keep records to verify certain information about your busi- ness assets."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00793",
+            "chunk_id": "irs_pub_583-c0041",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Why Keep Records?"
+            ],
+            "score": 0.016945382580161095,
+            "reranker": 2.410475254058838,
+            "text": "These records must support the income, expenses, and credits you report."
+          },
+          {
+            "sentence_id": "irs_pub_583-s01093",
+            "chunk_id": "irs_pub_583-c0054",
+            "document_id": "irs_pub_583",
+            "page": 16,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation \u2014 Bookkeeping System",
+              "How Long To Keep Records"
+            ],
+            "score": 0.016833167523145676,
+            "reranker": 2.3975372314453125,
+            "text": "If you have employees, you must keep all employment tax records for at least 4 years after the date the tax becomes due or is paid, whichever is later."
+          },
+          {
+            "sentence_id": "irs_pub_587-s00910",
+            "chunk_id": "irs_pub_587-c0065",
+            "document_id": "irs_pub_587",
+            "page": 16,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Listed Property"
+            ],
+            "score": 0.013963388279080391,
+            "reranker": 2.390625,
+            "text": "To meet the adequate records requirement, you must maintain an account book, diary, log, statement of ex- pense, trip sheet, or similar record or other documentary evidence that is sufficient to estab"
+          },
+          {
+            "sentence_id": "irs_pub_583-s00873",
+            "chunk_id": "irs_pub_583-c0045",
+            "document_id": "irs_pub_583",
+            "page": 13,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.03125,
+            "reranker": 2.388498067855835,
+            "text": "There are specific employment tax records you must keep."
+          },
+          {
+            "sentence_id": "irs_pub_587-s01004",
+            "chunk_id": "irs_pub_587-c0071",
+            "document_id": "irs_pub_587",
+            "page": 18,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Recordkeeping"
+            ],
+            "score": 0.020250093191862106,
+            "reranker": 2.3486204147338867,
+            "text": "You must keep your records for as long as they are impor- tant for any tax law."
+          }
+        ],
+        "unique_parent_chunks": 8
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_583-c0041",
+        "irs_pub_583-c0044",
+        "irs_pub_583-c0045",
+        "irs_pub_587-c0071"
+      ],
+      "parent_agreement": 0.5
+    },
+    {
+      "query": "How long should I keep supporting documents for my tax return?",
+      "layout_x": {
+        "latency_ms": 2203.8083749939688,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_17-c0104",
+            "document_id": "irs_pub_17",
+            "page": 19,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "How Long To Keep Records"
+            ],
+            "score": 0.028588563203811646,
+            "reranker": 2.798973560333252,
+            "sentence_count": 26,
+            "preview": "You must keep your records as long as they may be needed for the administration of any provision of the Internal Revenue Code. Gener- ally, this means you must "
+          },
+          {
+            "chunk_id": "irs_pub_542-c0032",
+            "document_id": "irs_pub_542",
+            "page": 9,
+            "section_path": [
+              "Recordkeeping"
+            ],
+            "score": 0.0317540317773819,
+            "reranker": 2.6557679176330566,
+            "sentence_count": 5,
+            "preview": "A corporation should keep its records for as long as they may be needed for the administration of any provision of the Internal Revenue Code. Usually records th"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0054",
+            "document_id": "irs_pub_583",
+            "page": 16,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation \u2014 Bookkeeping System",
+              "How Long To Keep Records"
+            ],
+            "score": 0.029653679579496384,
+            "reranker": 2.627410411834717,
+            "sentence_count": 19,
+            "preview": "You must keep your records as long as they may be nee- ded for the administration of any provision of the Internal Revenue Code. Generally, this means you must "
+          },
+          {
+            "chunk_id": "irs_pub_463-c0142",
+            "document_id": "irs_pub_463",
+            "page": 37,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "How Long To Keep Records and Receipts"
+            ],
+            "score": 0.03151364624500275,
+            "reranker": 2.594090223312378,
+            "sentence_count": 18,
+            "preview": "You must keep records as long as they may be needed for the administration of any provision of the Internal Revenue Code. Generally, this means you must keep re"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0044",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.03015873208642006,
+            "reranker": 2.4551384449005127,
+            "sentence_count": 37,
+            "preview": "Purchases, sales, payroll, and other transactions you have in your business generate supporting documents. Sup- porting documents include sales slips, paid bill"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0042",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Kinds of Records To Keep"
+            ],
+            "score": 0.02817460335791111,
+            "reranker": 2.409411907196045,
+            "sentence_count": 19,
+            "preview": "Except in a few cases, the law does not require any spe- cific kind of records. You can choose any recordkeeping system suited to your business that clearly sho"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0097",
+            "document_id": "irs_pub_17",
+            "page": 18,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "What Happens After I File?"
+            ],
+            "score": 0.03201844170689583,
+            "reranker": 2.3904478549957275,
+            "sentence_count": 11,
+            "preview": "After you send your return to the IRS, you may have some questions. This section discusses concerns you may have about recordkeeping, your refund, and what to d"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0103",
+            "document_id": "irs_pub_17",
+            "page": 19,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Proof of Payment"
+            ],
+            "score": 0.02765064872801304,
+            "reranker": 2.356595993041992,
+            "sentence_count": 12,
+            "preview": "One of your basic records is proof of payment. You should keep these records to support cer- tain amounts shown on your tax return. Proof of payment alone isn't"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0041",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Why Keep Records?"
+            ],
+            "score": 0.020018015056848526,
+            "reranker": 2.351987838745117,
+            "sentence_count": 28,
+            "preview": "Everyone in business must keep records. Good records will help you do the following. Monitor the progress of your business. You need good records to monitor the"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0028",
+            "document_id": "irs_pub_17",
+            "page": 8,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Introduction"
+            ],
+            "score": 0.026022912934422493,
+            "reranker": 2.348531723022461,
+            "sentence_count": 10,
+            "preview": "This chapter discusses the following topics. . Whether you have to file a return. \u00b7 How to file electronically. . How to file for free. \u00b7 When, how, and where t"
+          }
+        ],
+        "candidate_sentences": 185
+      },
+      "layout_y": {
+        "latency_ms": 2250.245915958658,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_542-s00540",
+            "chunk_id": "irs_pub_542-c0032",
+            "document_id": "irs_pub_542",
+            "page": 9,
+            "section_path": [
+              "Recordkeeping"
+            ],
+            "score": 0.01893424056470394,
+            "reranker": 3.010946035385132,
+            "text": "Usually records that support items of income, deductions, or credits on the return must be kept for 3 years from the date the return is due or filed, whichever is later."
+          },
+          {
+            "sentence_id": "irs_pub_17-s01709",
+            "chunk_id": "irs_pub_17-c0104",
+            "document_id": "irs_pub_17",
+            "page": 19,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "How Long To Keep Records"
+            ],
+            "score": 0.017770549282431602,
+            "reranker": 2.7238259315490723,
+            "text": "Gener- ally, this means you must keep records that sup- port items shown on your return until the period of limitations for that return runs out."
+          },
+          {
+            "sentence_id": "irs_pub_17-s01708",
+            "chunk_id": "irs_pub_17-c0104",
+            "document_id": "irs_pub_17",
+            "page": 19,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "How Long To Keep Records"
+            ],
+            "score": 0.017606360837817192,
+            "reranker": 2.6890881061553955,
+            "text": "You must keep your records as long as they may be needed for the administration of any provision of the Internal Revenue Code."
+          },
+          {
+            "sentence_id": "irs_pub_463-s02447",
+            "chunk_id": "irs_pub_463-c0142",
+            "document_id": "irs_pub_463",
+            "page": 37,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "How Long To Keep Records and Receipts"
+            ],
+            "score": 0.020425699651241302,
+            "reranker": 2.563606023788452,
+            "text": "Generally, this means you must keep records that support your deduction (or an item of income) for 3 years from the date you file the income tax return on which the deduction is claimed."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00834",
+            "chunk_id": "irs_pub_583-c0044",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.02741784043610096,
+            "reranker": 2.379990816116333,
+            "text": "You should keep supporting documents that show the amounts and sources of your gross receipts."
+          },
+          {
+            "sentence_id": "irs_pub_17-s01613",
+            "chunk_id": "irs_pub_17-c0097",
+            "document_id": "irs_pub_17",
+            "page": 19,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "What Happens After I File?"
+            ],
+            "score": 0.015265102498233318,
+            "reranker": 2.3635082244873047,
+            "text": "However, you should keep all receipts, canceled checks or other proof of payment, and any other records to support any deductions or credits you claim."
+          },
+          {
+            "sentence_id": "irs_pub_583-s01084",
+            "chunk_id": "irs_pub_583-c0054",
+            "document_id": "irs_pub_583",
+            "page": 16,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation \u2014 Bookkeeping System",
+              "How Long To Keep Records"
+            ],
+            "score": 0.02057347632944584,
+            "reranker": 2.3581910133361816,
+            "text": "Generally, this means you must keep re- cords that support an item of income or deduction on a re- turn until the period of limitations for that return runs out."
+          },
+          {
+            "sentence_id": "irs_pub_17-s00621",
+            "chunk_id": "irs_pub_17-c0028",
+            "document_id": "irs_pub_17",
+            "page": 8,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Introduction"
+            ],
+            "score": 0.025122549384832382,
+            "reranker": 2.347468376159668,
+            "text": "\u00b7 What records you should keep and how long you should keep them."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00829",
+            "chunk_id": "irs_pub_583-c0044",
+            "document_id": "irs_pub_583",
+            "page": 12,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Supporting Documents"
+            ],
+            "score": 0.02817460335791111,
+            "reranker": 2.3466708660125732,
+            "text": "It is important to keep these documents because they support the entries in your books and on your tax return."
+          },
+          {
+            "sentence_id": "irs_pub_17-s01610",
+            "chunk_id": "irs_pub_17-c0097",
+            "document_id": "irs_pub_17",
+            "page": 18,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "What Happens After I File?"
+            ],
+            "score": 0.014925372786819935,
+            "reranker": 2.340378999710083,
+            "text": "This part discusses why you should keep re- cords, what kinds of records you should keep, and how long you should keep them."
+          }
+        ],
+        "unique_parent_chunks": 7
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_17-c0028",
+        "irs_pub_17-c0097",
+        "irs_pub_17-c0104",
+        "irs_pub_463-c0142",
+        "irs_pub_542-c0032",
+        "irs_pub_583-c0044",
+        "irs_pub_583-c0054"
+      ],
+      "parent_agreement": 1.0
+    },
+    {
+      "query": "What depreciation method applies to residential rental property?",
+      "layout_x": {
+        "latency_ms": 2181.181000021752,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_946-c0139",
+            "document_id": "irs_pub_946",
+            "page": 34,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Depreciation Method Applies?"
+            ],
+            "score": 0.03100961446762085,
+            "reranker": 3.0960185527801514,
+            "sentence_count": 14,
+            "preview": "Terms you may need to know (see Glossary): Declining balance method Listed property Nonresidential real property Placed in service Property class Recovery perio"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0115",
+            "document_id": "irs_pub_946",
+            "page": 28,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Depreciation System (GDS or ADS) Applies?"
+            ],
+            "score": 0.02904040366411209,
+            "reranker": 2.9173662662506104,
+            "sentence_count": 13,
+            "preview": "Terms you may need to know (see Glossary): Listed property Nonresidential real property Placed in service Property class Recovery period Residential rental prop"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0137",
+            "document_id": "irs_pub_946",
+            "page": 34,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Convention Applies?"
+            ],
+            "score": 0.02548840269446373,
+            "reranker": 2.9166572093963623,
+            "sentence_count": 13,
+            "preview": "Terms you may need to know (see Glossary): Basis Convention Disposition Nonresidential real property Placed in service Recovery period Residential rental proper"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0133",
+            "document_id": "irs_pub_946",
+            "page": 33,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Recovery Periods Under GDS"
+            ],
+            "score": 0.032786883413791656,
+            "reranker": 2.8812103271484375,
+            "sentence_count": 7,
+            "preview": "Office in the home. If your home is a personal-use sin- gle family residence and you begin to use part of your home as an office, depreciate that part of your h"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0272",
+            "document_id": "irs_pub_946",
+            "page": 70,
+            "section_path": [
+              "Publication 946 How To Depreciate Property \u2014 Appendix A MACRS Percentage Table Guide General Depreciation System (GDS) Alternative Depreciation System (ADS)"
+            ],
+            "score": 0.02557544782757759,
+            "reranker": 2.805353879928589,
+            "sentence_count": 123,
+            "preview": "4th Qtr A-12 ADS 150% ADS Half-Year Any Any A-14 ADS 150% ADS Mid-Quarter Any 1st Qtr A-15 2nd Qtr A-16 3rd Qtr A-17 4th Qtr A-18 Chart 2. Use this chart to fin"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0397",
+            "document_id": "irs_pub_946",
+            "page": 111,
+            "section_path": [
+              "Publication 946 How To Depreciate Property \u2014 Appendix A MACRS Percentage Table Guide General Depreciation System (GDS) Alternative Depreciation System (ADS) \u2014 RATES TO FIGURE INCLUSION AMOUNTS FOR LEASED LISTED PROPERTY \u2014 Qualified Indian Reservation Property Tables for Property Placed in Service Before 2022 \u2014 Appendix B-Table of Class Lives and Recovery Periods",
+              "Glossary"
+            ],
+            "score": 0.029487181454896927,
+            "reranker": 2.740840435028076,
+            "sentence_count": 66,
+            "preview": "D Income forecast method 10 Declining balance: Incorrect depreciation deductions 13 P Partial business use 16 Passenger automobile: Method 40 index 6, 7, 11, 12"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0029",
+            "document_id": "irs_pub_946",
+            "page": 7,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "What Method Can You Use To Depreciate Your Property?"
+            ],
+            "score": 0.0320020467042923,
+            "reranker": 2.7302064895629883,
+            "sentence_count": 15,
+            "preview": "Terms you may need to know (see Glossary): Adjusted basis Basis Convention Exchange Fiduciary Grantor Intangible property Nonresidential real property Placed in"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0143",
+            "document_id": "irs_pub_946",
+            "page": 35,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "How Is the Depreciation Deduction Figured?"
+            ],
+            "score": 0.02765567973256111,
+            "reranker": 2.7209901809692383,
+            "sentence_count": 32,
+            "preview": "Terms you may need to know (see Glossary): Adjusted basis Amortization Basis Business/investment use Convention Declining balance method Disposition Exchange No"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0392",
+            "document_id": "irs_pub_946",
+            "page": 109,
+            "section_path": [
+              "Publication 946 How To Depreciate Property \u2014 Appendix A MACRS Percentage Table Guide General Depreciation System (GDS) Alternative Depreciation System (ADS) \u2014 RATES TO FIGURE INCLUSION AMOUNTS FOR LEASED LISTED PROPERTY \u2014 Qualified Indian Reservation Property Tables for Property Placed in Service Before 2022 \u2014 Appendix B-Table of Class Lives and Recovery Periods",
+              "Glossary"
+            ],
+            "score": 0.014285714365541935,
+            "reranker": 2.7068114280700684,
+            "sentence_count": 16,
+            "preview": "Grantor: The one who transfers prop- erty to another. Improvement: An addition to or par- tial replacement of property that adds to its value, appreciably lengt"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0144",
+            "document_id": "irs_pub_946",
+            "page": 36,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "How Is the Depreciation Deduction Figured?"
+            ],
+            "score": 0.030017919838428497,
+            "reranker": 2.7004311084747314,
+            "sentence_count": 16,
+            "preview": "\u00b7 Provides for equal yearly deductions (except for the first and last years) ADS using SL \u00b7 Listed property used 50% or less for business \u00b7 Property used predom"
+          }
+        ],
+        "candidate_sentences": 315
+      },
+      "layout_y": {
+        "latency_ms": 2172.892957984004,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_946-s01738",
+            "chunk_id": "irs_pub_946-c0139",
+            "document_id": "irs_pub_946",
+            "page": 34,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Depreciation Method Applies?"
+            ],
+            "score": 0.022291023284196854,
+            "reranker": 3.13430118560791,
+            "text": "Placed in service Property class Recovery period Residential rental property Straight line method Tax exempt"
+          },
+          {
+            "sentence_id": "irs_pub_946-s01648",
+            "chunk_id": "irs_pub_946-c0133",
+            "document_id": "irs_pub_946",
+            "page": 33,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Recovery Periods Under GDS"
+            ],
+            "score": 0.023699890822172165,
+            "reranker": 2.940761089324951,
+            "text": "However, if your home is an apartment in an apartment building that you own and the building is residential rental property, as defined earlier under Which Property Class Applies Under GDS, depreciate"
+          },
+          {
+            "sentence_id": "irs_pub_946-s01715",
+            "chunk_id": "irs_pub_946-c0137",
+            "document_id": "irs_pub_946",
+            "page": 34,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Convention Applies?"
+            ],
+            "score": 0.01923765242099762,
+            "reranker": 2.8372561931610107,
+            "text": "Basis Convention Disposition Nonresidential real property Placed in service Recovery period Residential rental property"
+          },
+          {
+            "sentence_id": "irs_pub_946-s00346",
+            "chunk_id": "irs_pub_946-c0029",
+            "document_id": "irs_pub_946",
+            "page": 7,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "What Method Can You Use To Depreciate Your Property?"
+            ],
+            "score": 0.019869305193424225,
+            "reranker": 2.785503625869751,
+            "text": "Grantor Intangible property Nonresidential real property Placed in service Related persons Residential rental property Salvage value Section 1245 property Section 1250 property Standard mileage rate S"
+          },
+          {
+            "sentence_id": "irs_pub_946-s01652",
+            "chunk_id": "irs_pub_946-c0133",
+            "document_id": "irs_pub_946",
+            "page": 33,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Recovery Periods Under GDS"
+            ],
+            "score": 0.017098696902394295,
+            "reranker": 2.752183437347412,
+            "text": "If you begin to rent a home that was your personal home before 1987, you de- preciate it as residential rental property over 27.5 years."
+          },
+          {
+            "sentence_id": "irs_pub_946-s01443",
+            "chunk_id": "irs_pub_946-c0117",
+            "document_id": "irs_pub_946",
+            "page": 29,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Property Class Applies Under GDS?"
+            ],
+            "score": 0.021288515999913216,
+            "reranker": 2.7025578022003174,
+            "text": "Placed in service Property class Recovery period Residential rental property Section 1245 property"
+          },
+          {
+            "sentence_id": "irs_pub_946-s04753",
+            "chunk_id": "irs_pub_946-c0276",
+            "document_id": "irs_pub_946",
+            "page": 73,
+            "section_path": [
+              "Publication 946 How To Depreciate Property \u2014 Appendix A MACRS Percentage Table Guide General Depreciation System (GDS) Alternative Depreciation System (ADS)"
+            ],
+            "score": 0.02580128237605095,
+            "reranker": 2.7011399269104004,
+            "text": "Residential Rental Property Mid-Month Convention Straight Line-27.5 Years"
+          },
+          {
+            "sentence_id": "irs_pub_946-s02207",
+            "chunk_id": "irs_pub_946-c0161",
+            "document_id": "irs_pub_946",
+            "page": 40,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Straight Line Method"
+            ],
+            "score": 0.01662820763885975,
+            "reranker": 2.6727824211120605,
+            "text": "When using the straight line method, you apply a different depreciation rate each year to the adjusted basis of your property."
+          },
+          {
+            "sentence_id": "irs_pub_946-s01614",
+            "chunk_id": "irs_pub_946-c0131",
+            "document_id": "irs_pub_946",
+            "page": 32,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Which Recovery Period Applies?"
+            ],
+            "score": 0.027397260069847107,
+            "reranker": 2.6394622325897217,
+            "text": "Residential rental property Section 1245 property"
+          },
+          {
+            "sentence_id": "irs_pub_946-s02581",
+            "chunk_id": "irs_pub_946-c0183",
+            "document_id": "irs_pub_946",
+            "page": 46,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Property Placed in Service in a Short Tax Year"
+            ],
+            "score": 0.02063353732228279,
+            "reranker": 2.599761724472046,
+            "text": "The de- preciation method for this property is the 200% declining balance method."
+          }
+        ],
+        "unique_parent_chunks": 9
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_946-c0029",
+        "irs_pub_946-c0133",
+        "irs_pub_946-c0137",
+        "irs_pub_946-c0139"
+      ],
+      "parent_agreement": 0.4444444444444444
+    },
+    {
+      "query": "When is Section 179 expensing not allowed?",
+      "layout_x": {
+        "latency_ms": 2268.2678750134073,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_946-c0067",
+            "document_id": "irs_pub_946",
+            "page": 17,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Excepted Property"
+            ],
+            "score": 0.02584097906947136,
+            "reranker": 2.6635663509368896,
+            "sentence_count": 16,
+            "preview": "Even if the requirements explained earlier under What Property Qualifies? are met, you cannot elect the section 179 deduction for the following property. \u00b7 Cert"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0079",
+            "document_id": "irs_pub_946",
+            "page": 20,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Business Income Limit"
+            ],
+            "score": 0.02654094621539116,
+            "reranker": 2.596925973892212,
+            "sentence_count": 10,
+            "preview": "Your selections must be shown in your books and records. For this purpose, treat section 179 costs allocated from a partnership or an S corporation as one item "
+          },
+          {
+            "chunk_id": "irs_pub_463-c0086",
+            "document_id": "irs_pub_463",
+            "page": 22,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Section 179 Deduction"
+            ],
+            "score": 0.02919863536953926,
+            "reranker": 2.535780191421509,
+            "sentence_count": 20,
+            "preview": "If you used the property more than 50% for business, multiply the cost of the property by the percentage of business use. The result is the cost of the property"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0085",
+            "document_id": "irs_pub_463",
+            "page": 22,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Section 179 Deduction"
+            ],
+            "score": 0.029957523569464684,
+            "reranker": 2.524082660675049,
+            "sentence_count": 18,
+            "preview": "You can elect to recover all or part of the cost of a car that is qualifying section 179 property, up to a limit, by deduct- ing it in the year you place the pr"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0083",
+            "document_id": "irs_pub_463",
+            "page": 22,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Actual Car Expenses"
+            ],
+            "score": 0.016393441706895828,
+            "reranker": 2.5224876403808594,
+            "sentence_count": 18,
+            "preview": "Enter the amount paid on Schedule A (Form 1040), line 5c. Sales taxes. Generally, sales taxes on your car are part of your car's basis and are recovered through"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0064",
+            "document_id": "irs_pub_946",
+            "page": 16,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Property Acquired by Purchase"
+            ],
+            "score": 0.021464645862579346,
+            "reranker": 2.4884583950042725,
+            "sentence_count": 20,
+            "preview": "To qualify for the section 179 deduction, your property must have been acquired by purchase. For example, prop- erty acquired by gift or inheritance does not qu"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0087",
+            "document_id": "irs_pub_463",
+            "page": 23,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Section 179 Deduction"
+            ],
+            "score": 0.019792035222053528,
+            "reranker": 2.469848871231079,
+            "sentence_count": 15,
+            "preview": "The total amount you can deduct under section 179 each year after you apply the limits listed above cannot be more than the taxable income from the active condu"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0070",
+            "document_id": "irs_pub_587",
+            "page": 17,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Personal Property Converted to Business Use"
+            ],
+            "score": 0.015556691214442253,
+            "reranker": 2.458860397338867,
+            "sentence_count": 15,
+            "preview": "If you use property in your home office that was used pre- viously for personal purposes, you cannot take a section 179 deduction for the property. If you began"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0090",
+            "document_id": "irs_pub_463",
+            "page": 24,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Section 179 Deduction"
+            ],
+            "score": 0.027820121496915817,
+            "reranker": 2.41898250579834,
+            "sentence_count": 16,
+            "preview": "These records must show how you acquired the property, the person you acquired it from, and when you placed it in service. Revoking an election. An election (or"
+          },
+          {
+            "chunk_id": "irs_pub_334-c0014",
+            "document_id": "irs_pub_334",
+            "page": 4,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "What's New for 2025"
+            ],
+            "score": 0.019917583093047142,
+            "reranker": 2.4131338596343994,
+            "sentence_count": 17,
+            "preview": "You can't deduct more than $25,000 of those tips. The deduction is claimed on Schedule 1-A (Form 1040), not on your Schedule C (Form 1040). See the Instructions"
+          }
+        ],
+        "candidate_sentences": 165
+      },
+      "layout_y": {
+        "latency_ms": 1178.6223329836503,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_463-s00030",
+            "chunk_id": "irs_pub_463-c0004",
+            "document_id": "irs_pub_463",
+            "page": 2,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "What's New"
+            ],
+            "score": 0.015948276966810226,
+            "reranker": 2.6536412239074707,
+            "text": "For tax years beginning in 2025, the aggregate cost of any Code section 179 prop- erty that a taxpayer elects to treat as an expense cannot exceed $2,500,000 and the cost of any sport utility vehicle "
+          },
+          {
+            "sentence_id": "irs_pub_946-s01043",
+            "chunk_id": "irs_pub_946-c0079",
+            "document_id": "irs_pub_946",
+            "page": 20,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Business Income Limit"
+            ],
+            "score": 0.020164526998996735,
+            "reranker": 2.608268976211548,
+            "text": "Thus, the amount of any 2025 disallowed section 179 expense deduction attributable to qualified section 179 real property will be reported on line 13 of Form 4562."
+          },
+          {
+            "sentence_id": "irs_pub_463-s01240",
+            "chunk_id": "irs_pub_463-c0086",
+            "document_id": "irs_pub_463",
+            "page": 23,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Section 179 Deduction"
+            ],
+            "score": 0.019603174179792404,
+            "reranker": 2.582038402557373,
+            "text": "If the cost of your section 179 property placed in service during tax years beginning in 2025 is $6,500,000 or more, you can't take a section 179 deduction."
+          },
+          {
+            "sentence_id": "irs_pub_946-s00868",
+            "chunk_id": "irs_pub_946-c0067",
+            "document_id": "irs_pub_946",
+            "page": 17,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Excepted Property"
+            ],
+            "score": 0.01608058623969555,
+            "reranker": 2.522310256958008,
+            "text": "Generally, you cannot claim a section 179 deduction based on the cost of property you lease to someone else."
+          },
+          {
+            "sentence_id": "irs_pub_946-s02907",
+            "chunk_id": "irs_pub_946-c0204",
+            "document_id": "irs_pub_946",
+            "page": 51,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Introduction"
+            ],
+            "score": 0.018303915858268738,
+            "reranker": 2.469494342803955,
+            "text": "If the property is not used predominantly (more than 50%) for qualified business use, you cannot claim the section 179 de- duction or a special depreciation allowance."
+          },
+          {
+            "sentence_id": "irs_pub_946-s02381",
+            "chunk_id": "irs_pub_946-c0168",
+            "document_id": "irs_pub_946",
+            "page": 42,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Examples"
+            ],
+            "score": 0.022495534271001816,
+            "reranker": 2.4476945400238037,
+            "text": "You do not elect a section 179 deduction and these items do not qualify for a special depreciation allowance."
+          },
+          {
+            "sentence_id": "irs_pub_946-s02295",
+            "chunk_id": "irs_pub_946-c0165",
+            "document_id": "irs_pub_946",
+            "page": 41,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Examples"
+            ],
+            "score": 0.022521551698446274,
+            "reranker": 2.431034564971924,
+            "text": "You do not elect to take the section 179 deduction and the property does not qualify for a special deprecia- tion allowance."
+          },
+          {
+            "sentence_id": "irs_pub_946-s03019",
+            "chunk_id": "irs_pub_946-c0212",
+            "document_id": "irs_pub_946",
+            "page": 54,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Can Employees Claim a Deduction?"
+            ],
+            "score": 0.015110401436686516,
+            "reranker": 2.427844285964966,
+            "text": "If these requirements are not met, you cannot deduct depreciation (including the section 179 deduction) or rent expenses for your use of the property as an employee."
+          },
+          {
+            "sentence_id": "irs_pub_946-s02064",
+            "chunk_id": "irs_pub_946-c0153",
+            "document_id": "irs_pub_946",
+            "page": 39,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Examples"
+            ],
+            "score": 0.0216821301728487,
+            "reranker": 2.4060444831848145,
+            "text": "You do not elect a section 179 deduction and none of these items are qualified property for purposes of claiming a special depreciation allowance."
+          },
+          {
+            "sentence_id": "irs_pub_946-s00925",
+            "chunk_id": "irs_pub_946-c0072",
+            "document_id": "irs_pub_946",
+            "page": 18,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Costs Exceeding $4,000,000"
+            ],
+            "score": 0.020527860149741173,
+            "reranker": 2.3943469524383545,
+            "text": "If the cost of your section 179 property placed in service during 2025 is $6,500,000 or more, you cannot take a section 179 deduction."
+          }
+        ],
+        "unique_parent_chunks": 10
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_463-c0086",
+        "irs_pub_946-c0067",
+        "irs_pub_946-c0079"
+      ],
+      "parent_agreement": 0.3
+    },
+    {
+      "query": "What is the standard mileage rate for business use of a car?",
+      "layout_x": {
+        "latency_ms": 1169.9215829721652,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_463-c0077",
+            "document_id": "irs_pub_463",
+            "page": 20,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.03279569745063782,
+            "reranker": 3.4575772285461426,
+            "sentence_count": 15,
+            "preview": "For 2025, the standard mileage rate for the cost of operat- ing your car for business use is 70 cents ($0.70) per mile. Caution: If you use the standard mileage"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0159",
+            "document_id": "irs_pub_463",
+            "page": 44,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Per Diem and Car Allowances"
+            ],
+            "score": 0.029323630034923553,
+            "reranker": 3.3115358352661133,
+            "sentence_count": 20,
+            "preview": "The standard mileage rate. This is a set rate per mile that you can use to figure your deductible car expenses. For 2025, the standard mileage rate for the cost"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0004",
+            "document_id": "irs_pub_463",
+            "page": 1,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "What's New"
+            ],
+            "score": 0.02765151485800743,
+            "reranker": 3.3072822093963623,
+            "sentence_count": 13,
+            "preview": "Special depreciation allowance is explained in chapter 4. Standard mileage rate. For 2025, the standard mileage rate for the cost of operating your car for busi"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0130",
+            "document_id": "irs_pub_463",
+            "page": 34,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Disposition of a Car"
+            ],
+            "score": 0.03079839050769806,
+            "reranker": 3.2987749576568604,
+            "sentence_count": 52,
+            "preview": "Depreciation adjustment when you used the stand- ard mileage rate. If you used the standard mileage rate for the business use of your car, depreciation was incl"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0599",
+            "document_id": "irs_pub_17",
+            "page": 103,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals \u2014 2025 Standard Deduction Tables",
+              "Other Itemized Deductions"
+            ],
+            "score": 0.030886195600032806,
+            "reranker": 3.2491493225097656,
+            "sentence_count": 3,
+            "preview": "What's New Standard mileage rate. The 2025 rate for business use of a vehicle is 70 cents a mile."
+          },
+          {
+            "chunk_id": "irs_pub_334-c0151",
+            "document_id": "irs_pub_334",
+            "page": 35,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Methods for Deducting Car and Truck Expenses"
+            ],
+            "score": 0.032522473484277725,
+            "reranker": 3.178964376449585,
+            "sentence_count": 29,
+            "preview": "For local transportation or overnight travel by car or truck, you can generally use one of the following methods to fig- ure your expenses. \u00b7 Standard mileage r"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0079",
+            "document_id": "irs_pub_463",
+            "page": 21,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.03100961446762085,
+            "reranker": 3.159822940826416,
+            "sentence_count": 24,
+            "preview": "The following examples illustrate the rules for when you can and can't use the standard mileage rate for five or more cars. Example 1. A salesperson owns three "
+          },
+          {
+            "chunk_id": "irs_pub_583-c0038",
+            "document_id": "irs_pub_583",
+            "page": 11,
+            "section_path": [
+              "Starting a Business and Keeping Records \u2014 Depreciation",
+              "Car and Truck Expenses"
+            ],
+            "score": 0.029957523569464684,
+            "reranker": 3.1009812355041504,
+            "sentence_count": 34,
+            "preview": "If you use your car or truck in your business, you can de- duct the costs of operating and maintaining it. You gener- ally can deduct either your actual expense"
+          },
+          {
+            "chunk_id": "irs_pub_334-c0016",
+            "document_id": "irs_pub_334",
+            "page": 5,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "What's New for 2026"
+            ],
+            "score": 0.022686488926410675,
+            "reranker": 3.006692409515381,
+            "sentence_count": 19,
+            "preview": "The following are some of the tax changes for 2026. For information on other changes, go to IRS.gov. Maximum net earnings. The maximum net self-employ- ment ear"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0078",
+            "document_id": "irs_pub_463",
+            "page": 20,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.02967032976448536,
+            "reranker": 2.995349407196045,
+            "sentence_count": 21,
+            "preview": "If you change to the actual expenses method in a later year, but before your car is fully depreci- ated, you have to estimate the remaining useful life of the c"
+          }
+        ],
+        "candidate_sentences": 230
+      },
+      "layout_y": {
+        "latency_ms": 1140.9703330136836,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_463-s01062",
+            "chunk_id": "irs_pub_463-c0077",
+            "document_id": "irs_pub_463",
+            "page": 20,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.026702720671892166,
+            "reranker": 3.5107474327087402,
+            "text": "For 2025, the standard mileage rate for the cost of operat- ing your car for business use is 70 cents ($0.70) per mile."
+          },
+          {
+            "sentence_id": "irs_pub_463-s00021",
+            "chunk_id": "irs_pub_463-c0004",
+            "document_id": "irs_pub_463",
+            "page": 1,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "What's New"
+            ],
+            "score": 0.028030304238200188,
+            "reranker": 3.379593849182129,
+            "text": "For 2025, the standard mileage rate for the cost of operating your car for business use is 70 cents ($0.70) per mile."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00337",
+            "chunk_id": "irs_pub_334-c0016",
+            "document_id": "irs_pub_334",
+            "page": 5,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "What's New for 2026"
+            ],
+            "score": 0.024137478321790695,
+            "reranker": 3.2349705696105957,
+            "text": "For 2026, the standard mileage rate for the cost of operating your car, van, pickup, or panel truck for each mile of business use is 72.5 cents a mile."
+          },
+          {
+            "sentence_id": "irs_pub_463-s01108",
+            "chunk_id": "irs_pub_463-c0079",
+            "document_id": "irs_pub_463",
+            "page": 21,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.02006913721561432,
+            "reranker": 3.206613063812256,
+            "text": "You can use the standard mileage rate for the business use of the pickup trucks, the van, and the cars because you never have more than four vehicles used for business at the same time."
+          },
+          {
+            "sentence_id": "irs_pub_463-s02771",
+            "chunk_id": "irs_pub_463-c0159",
+            "document_id": "irs_pub_463",
+            "page": 44,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Per Diem and Car Allowances"
+            ],
+            "score": 0.02633311226963997,
+            "reranker": 3.175419807434082,
+            "text": "For 2025, the standard mileage rate for the cost of operat- ing your car for business use is 70 cents ($0.70) per mile."
+          },
+          {
+            "sentence_id": "irs_pub_463-s02200",
+            "chunk_id": "irs_pub_463-c0130",
+            "document_id": "irs_pub_463",
+            "page": 34,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Disposition of a Car"
+            ],
+            "score": 0.022203948348760605,
+            "reranker": 3.145644187927246,
+            "text": "Use the full standard mileage rate (70 cents ($0.70) per mile from January 1-December 31 for 2025) for business miles driven."
+          },
+          {
+            "sentence_id": "irs_pub_463-s01091",
+            "chunk_id": "irs_pub_463-c0078",
+            "document_id": "irs_pub_463",
+            "page": 20,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.02039337530732155,
+            "reranker": 3.1179957389831543,
+            "text": "If you own or lease five or more cars that are used for business at the same time, you can't use the standard mileage rate for the business use of any car."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00297",
+            "chunk_id": "irs_pub_334-c0013",
+            "document_id": "irs_pub_334",
+            "page": 4,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "What's New for 2025"
+            ],
+            "score": 0.01919819414615631,
+            "reranker": 3.1137421131134033,
+            "text": "For 2025, the standard mileage rate for the cost of operating your car, van, pickup, or panel truck for each mile of business use during 2025 in- creased to 70 cents a mile."
+          },
+          {
+            "sentence_id": "irs_pub_17-s09284",
+            "chunk_id": "irs_pub_17-c0599",
+            "document_id": "irs_pub_17",
+            "page": 103,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals \u2014 2025 Standard Deduction Tables",
+              "Other Itemized Deductions"
+            ],
+            "score": 0.01727178692817688,
+            "reranker": 3.0336320400238037,
+            "text": "The 2025 rate for business use of a vehicle is 70 cents a mile."
+          },
+          {
+            "sentence_id": "irs_pub_463-s01069",
+            "chunk_id": "irs_pub_463-c0077",
+            "document_id": "irs_pub_463",
+            "page": 20,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "Standard Mileage Rate"
+            ],
+            "score": 0.022893773391842842,
+            "reranker": 2.959193468093872,
+            "text": "If you want to use the standard mileage rate for a car you own, you must choose to use it in the first year the car is available for use in your business."
+          }
+        ],
+        "unique_parent_chunks": 9
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_17-c0599",
+        "irs_pub_334-c0016",
+        "irs_pub_463-c0004",
+        "irs_pub_463-c0077",
+        "irs_pub_463-c0078",
+        "irs_pub_463-c0079",
+        "irs_pub_463-c0130",
+        "irs_pub_463-c0159"
+      ],
+      "parent_agreement": 0.8888888888888888
+    },
+    {
+      "query": "Who qualifies as a statutory employee?",
+      "layout_x": {
+        "latency_ms": 1046.932208002545,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_334-c0008",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You a Statutory Employee?"
+            ],
+            "score": 0.03306011110544205,
+            "reranker": 2.2648770809173584,
+            "sentence_count": 2,
+            "preview": "A statutory employee has a checkmark in box 13 of their Form W-2, Wage and Tax Statement. Statutory employees use Schedule C (Form 1040) to report their wages a"
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0021",
+            "document_id": "irs_pub_15b",
+            "page": 7,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits"
+            ],
+            "score": 0.013513513840734959,
+            "reranker": 2.2443177700042725,
+            "sentence_count": 25,
+            "preview": "This exclusion applies to contributions you make to an ac- cident or health plan for an employee, including the follow- ing. . Contributions to the cost of acci"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0147",
+            "document_id": "irs_pub_463",
+            "page": 41,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Where To Report"
+            ],
+            "score": 0.028717949986457825,
+            "reranker": 2.1591787338256836,
+            "sentence_count": 19,
+            "preview": "Don't complete Form 2106. Statutory employees include full-time life insurance salespersons, certain agent or commission drivers, travel- ing salespersons, and "
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0051",
+            "document_id": "irs_pub_15b",
+            "page": 14,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "Group-Term Life Insurance Coverage"
+            ],
+            "score": 0.023039761930704117,
+            "reranker": 2.0922505855560303,
+            "sentence_count": 30,
+            "preview": "This exclusion applies to life insurance coverage that meets all the following conditions. . It provides a general death benefit that isn't included in income. "
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0052",
+            "document_id": "irs_pub_15b",
+            "page": 14,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "Group-Term Life Insurance Coverage"
+            ],
+            "score": 0.027031738311052322,
+            "reranker": 2.073197841644287,
+            "sentence_count": 16,
+            "preview": "2. A full-time life insurance agent who is a current statu- tory employee. 3. An individual who was formerly your employee under (1) or (2). 4. A leased employe"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0146",
+            "document_id": "irs_pub_463",
+            "page": 41,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Where To Report"
+            ],
+            "score": 0.01666666753590107,
+            "reranker": 2.0504231452941895,
+            "sentence_count": 18,
+            "preview": "Report your business expenses for your work as an em- ployee on Form 2106, as discussed next. Caution: Form 2106 is only used by Armed Forces re- servists, qual"
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0013",
+            "document_id": "irs_pub_15b",
+            "page": 4,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits",
+              "Cafeteria Plans"
+            ],
+            "score": 0.019694244489073753,
+            "reranker": 2.0370421409606934,
+            "sentence_count": 22,
+            "preview": "\u00b7 Tuition reduction. \u00b7 Working condition benefits. It also can't include scholarships or fellowships (dis- cussed in Pub. 970). Contribution limit on a health F"
+          },
+          {
+            "chunk_id": "irs_pub_334-c0005",
+            "document_id": "irs_pub_334",
+            "page": 2,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Introduction"
+            ],
+            "score": 0.023676099255681038,
+            "reranker": 2.0316364765167236,
+            "sentence_count": 30,
+            "preview": "This publication provides general information about the federal tax laws that apply to you if you are a self-em- ployed person or a statutory employee. This pub"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0316",
+            "document_id": "irs_pub_17",
+            "page": 53,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Special Rules for Certain Employees"
+            ],
+            "score": 0.015384615398943424,
+            "reranker": 1.9622490406036377,
+            "sentence_count": 1,
+            "preview": "This section deals with special rules for people in certain types of employment: members of the clergy, members of religious orders, people working for foreign "
+          },
+          {
+            "chunk_id": "irs_pub_334-c0038",
+            "document_id": "irs_pub_334",
+            "page": 9,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Self-Employment (SE) Tax"
+            ],
+            "score": 0.02283341810107231,
+            "reranker": 1.9555140733718872,
+            "sentence_count": 23,
+            "preview": "SE tax is a social security and Medicare tax primarily for individuals who work for themselves. It is similar to the so- cial security and Medicare taxes withhe"
+          }
+        ],
+        "candidate_sentences": 186
+      },
+      "layout_y": {
+        "latency_ms": 1248.1154580018483,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_334-s00213",
+            "chunk_id": "irs_pub_334-c0008",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You a Statutory Employee?"
+            ],
+            "score": 0.025333737954497337,
+            "reranker": 2.34427809715271,
+            "text": "A statutory employee has a checkmark in box 13 of their Form W-2, Wage and Tax Statement."
+          },
+          {
+            "sentence_id": "irs_pub_463-s02586",
+            "chunk_id": "irs_pub_463-c0146",
+            "document_id": "irs_pub_463",
+            "page": 41,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "Where To Report"
+            ],
+            "score": 0.022153127938508987,
+            "reranker": 2.3101603984832764,
+            "text": "Statutory employees include full-time life insurance salespersons, certain agent or commission drivers, travel- ing salespersons, and certain homeworkers."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00214",
+            "chunk_id": "irs_pub_334-c0008",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You a Statutory Employee?"
+            ],
+            "score": 0.03030998818576336,
+            "reranker": 2.229917526245117,
+            "text": "Statutory employees use Schedule C (Form 1040) to report their wages and expenses."
+          },
+          {
+            "sentence_id": "irs_pub_15b-s00441",
+            "chunk_id": "irs_pub_15b-c0021",
+            "document_id": "irs_pub_15b",
+            "page": 7,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits"
+            ],
+            "score": 0.0233423113822937,
+            "reranker": 2.229651689529419,
+            "text": "\u00b7 A full-time life insurance agent who is a current statu- tory employee."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00159",
+            "chunk_id": "irs_pub_334-c0005",
+            "document_id": "irs_pub_334",
+            "page": 2,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Introduction"
+            ],
+            "score": 0.01870286650955677,
+            "reranker": 2.2130801677703857,
+            "text": "This publication provides general information about the federal tax laws that apply to you if you are a self-em- ployed person or a statutory employee."
+          },
+          {
+            "sentence_id": "irs_pub_15b-s00845",
+            "chunk_id": "irs_pub_15b-c0051",
+            "document_id": "irs_pub_15b",
+            "page": 14,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "Group-Term Life Insurance Coverage"
+            ],
+            "score": 0.02325870655477047,
+            "reranker": 2.1275646686553955,
+            "text": "A full-time life insurance agent who is a current statu- tory employee."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00625",
+            "chunk_id": "irs_pub_334-c0038",
+            "document_id": "irs_pub_334",
+            "page": 9,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Self-Employment (SE) Tax"
+            ],
+            "score": 0.02567783184349537,
+            "reranker": 2.1229565143585205,
+            "text": "If you earned income as a statutory employee, you don't pay SE tax on that income."
+          },
+          {
+            "sentence_id": "irs_pub_15b-s00260",
+            "chunk_id": "irs_pub_15b-c0013",
+            "document_id": "irs_pub_15b",
+            "page": 4,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits",
+              "Cafeteria Plans"
+            ],
+            "score": 0.023180458694696426,
+            "reranker": 2.120696783065796,
+            "text": "A full-time life insurance agent who is a current statu- tory employee."
+          },
+          {
+            "sentence_id": "irs_pub_334-s03824",
+            "chunk_id": "irs_pub_334-c0231",
+            "document_id": "irs_pub_334",
+            "page": 57,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "Other Federal Agencies"
+            ],
+            "score": 0.032522473484277725,
+            "reranker": 2.069387435913086,
+            "text": "Statutory employee 3"
+          },
+          {
+            "sentence_id": "irs_pub_15b-s01784",
+            "chunk_id": "irs_pub_15b-c0113",
+            "document_id": "irs_pub_15b",
+            "page": 30,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "Unsafe Conditions Commuting Rule"
+            ],
+            "score": 0.01587301678955555,
+            "reranker": 2.005671501159668,
+            "text": "A qualified employee for 2026 is one who:"
+          }
+        ],
+        "unique_parent_chunks": 9
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_15b-c0013",
+        "irs_pub_15b-c0021",
+        "irs_pub_15b-c0051",
+        "irs_pub_334-c0005",
+        "irs_pub_334-c0008",
+        "irs_pub_334-c0038",
+        "irs_pub_463-c0146"
+      ],
+      "parent_agreement": 0.7777777777777778
+    },
+    {
+      "query": "What expenses can a self-employed person deduct for a home office?",
+      "layout_x": {
+        "latency_ms": 1103.423708002083,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_334-c0174",
+            "document_id": "irs_pub_334",
+            "page": 41,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "Business Use of Your Home"
+            ],
+            "score": 0.025165371596813202,
+            "reranker": 2.7032668590545654,
+            "sentence_count": 20,
+            "preview": "However, for other ways to qualify to deduct home office expenses, see Pub. 587. Deduction limit. If your gross income from the business use of your home equals"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0018",
+            "document_id": "irs_pub_587",
+            "page": 5,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Place To Meet Patients, Clients, or Customers"
+            ],
+            "score": 0.027500923722982407,
+            "reranker": 2.6401712894439697,
+            "sentence_count": 10,
+            "preview": "If you meet or deal with patients, clients, or customers in your home in the normal course of your business, even though you also carry on business at another l"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0034",
+            "document_id": "irs_pub_587",
+            "page": 9,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Deduction Limit"
+            ],
+            "score": 0.030365770682692528,
+            "reranker": 2.6344997882843018,
+            "sentence_count": 13,
+            "preview": "If your gross income from the business use of your home equals or exceeds your total business expenses (including depreciation), you can deduct all your busines"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0016",
+            "document_id": "irs_pub_587",
+            "page": 5,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Principal Place of Business"
+            ],
+            "score": 0.01515151560306549,
+            "reranker": 2.599761724472046,
+            "sentence_count": 16,
+            "preview": "Example 3. Taylor is a self-employed anesthesiolo- gist. Taylor spends the majority of the time administering anesthesia and postoperative care in three local h"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0036",
+            "document_id": "irs_pub_587",
+            "page": 10,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Deduction Limit"
+            ],
+            "score": 0.02282608672976494,
+            "reranker": 2.598343849182129,
+            "sentence_count": 9,
+            "preview": "Additionally, you can de- duct all of the business part of your expenses for mainte- nance, insurance, and utilities, because the total ($800) is less than the "
+          },
+          {
+            "chunk_id": "irs_pub_587-c0005",
+            "document_id": "irs_pub_587",
+            "page": 1,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Introduction"
+            ],
+            "score": 0.021741699427366257,
+            "reranker": 2.585582971572876,
+            "sentence_count": 17,
+            "preview": "The purpose of this publication is to provide information on figuring and claiming the deduction for business use of your home. The term \"home\" includes a house"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0072",
+            "document_id": "irs_pub_587",
+            "page": 18,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Where To Deduct"
+            ],
+            "score": 0.0295138880610466,
+            "reranker": 2.577784776687622,
+            "sentence_count": 2,
+            "preview": "Deduct expenses for the business use of your home on Form 1040 or Form 1040-SR. Where you deduct these ex- penses on the form depends on whether you are a self-"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0024",
+            "document_id": "irs_pub_587",
+            "page": 7,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Actual Expenses"
+            ],
+            "score": 0.02380952425301075,
+            "reranker": 2.557225465774536,
+            "sentence_count": 23,
+            "preview": "You can deduct the business percentage of the part that applies to the follow- ing year in that year. Rent. If you rent the home you occupy and meet the re- qui"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0069",
+            "document_id": "irs_pub_463",
+            "page": 17,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "4. Transportation"
+            ],
+            "score": 0.016393441706895828,
+            "reranker": 2.5379068851470947,
+            "sentence_count": 25,
+            "preview": "Also, daily transportation expenses can be deducted if (1) you have one or more regular work locations away from your resi- dence; or (2) your residence is your"
+          },
+          {
+            "chunk_id": "irs_pub_587-c0078",
+            "document_id": "irs_pub_587",
+            "page": 19,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Business Expenses for Use of Your Home"
+            ],
+            "score": 0.021836180239915848,
+            "reranker": 2.521601438522339,
+            "sentence_count": 19,
+            "preview": "Other expenses related to the use of your home may be deducted only to the extent they are related to the busi- ness use of your home. These expenses include in"
+          }
+        ],
+        "candidate_sentences": 154
+      },
+      "layout_y": {
+        "latency_ms": 1175.0680840341374,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_334-s02639",
+            "chunk_id": "irs_pub_334-c0174",
+            "document_id": "irs_pub_334",
+            "page": 42,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "Business Use of Your Home"
+            ],
+            "score": 0.016237709671258926,
+            "reranker": 2.4764065742492676,
+            "text": "The business part of expenses you could deduct even if you didn't use your home for business (such as mortgage interest, real estate taxes, and casualty and theft losses that are allowable as itemized"
+          },
+          {
+            "sentence_id": "irs_pub_334-s02635",
+            "chunk_id": "irs_pub_334-c0174",
+            "document_id": "irs_pub_334",
+            "page": 42,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "Business Use of Your Home"
+            ],
+            "score": 0.01668151654303074,
+            "reranker": 2.41650128364563,
+            "text": "If your gross income from the business use of your home equals or exceeds your total business expenses (including depreciation), you can deduct all your business expenses related to the use of your ho"
+          },
+          {
+            "sentence_id": "irs_pub_587-s01070",
+            "chunk_id": "irs_pub_587-c0079",
+            "document_id": "irs_pub_587",
+            "page": 19,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Business Expenses Not for Use of Your Home"
+            ],
+            "score": 0.01825198158621788,
+            "reranker": 2.364039897918701,
+            "text": "No matter how you figure the deduction for business use of your home, deduct business expenses that are not for the use of your home itself (dues, salaries, supplies, cer- tain telephone expenses, dep"
+          },
+          {
+            "sentence_id": "irs_pub_587-s00323",
+            "chunk_id": "irs_pub_587-c0023",
+            "document_id": "irs_pub_587",
+            "page": 7,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Actual Expenses"
+            ],
+            "score": 0.0143772903829813,
+            "reranker": 2.316629648208618,
+            "text": "You can deduct the cost of insurance that covers the business part of your home."
+          },
+          {
+            "sentence_id": "irs_pub_463-s00947",
+            "chunk_id": "irs_pub_463-c0069",
+            "document_id": "irs_pub_463",
+            "page": 18,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses",
+              "4. Transportation"
+            ],
+            "score": 0.01515151560306549,
+            "reranker": 2.312819004058838,
+            "text": "Most employees and self-employed persons can use this chart. ("
+          },
+          {
+            "sentence_id": "irs_pub_587-s01015",
+            "chunk_id": "irs_pub_587-c0072",
+            "document_id": "irs_pub_587",
+            "page": 18,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Where To Deduct"
+            ],
+            "score": 0.013062169775366783,
+            "reranker": 2.3022735118865967,
+            "text": "Deduct expenses for the business use of your home on Form 1040 or Form 1040-SR."
+          },
+          {
+            "sentence_id": "irs_pub_587-s00353",
+            "chunk_id": "irs_pub_587-c0026",
+            "document_id": "irs_pub_587",
+            "page": 7,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Depreciating Your Home"
+            ],
+            "score": 0.020181257277727127,
+            "reranker": 2.2789671421051025,
+            "text": "If you own your home and qualify to deduct expenses for its business use, you can claim a deduction for deprecia- tion."
+          },
+          {
+            "sentence_id": "irs_pub_587-s00345",
+            "chunk_id": "irs_pub_587-c0024",
+            "document_id": "irs_pub_587",
+            "page": 7,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Actual Expenses"
+            ],
+            "score": 0.017098696902394295,
+            "reranker": 2.2709031105041504,
+            "text": "However, if you use part of your home for business, you can deduct the business part of these expenses."
+          },
+          {
+            "sentence_id": "irs_pub_587-s00293",
+            "chunk_id": "irs_pub_587-c0022",
+            "document_id": "irs_pub_587",
+            "page": 6,
+            "section_path": [
+              "Publication 587 Business Use of Your Home \u2014 (Including Use by Daycare Providers)",
+              "Actual Expenses"
+            ],
+            "score": 0.01902502030134201,
+            "reranker": 2.2683331966400146,
+            "text": "Certain expenses are deductible to the extent they would have been deductible as an itemized deduction on your Schedule A or, if claiming the standard deduction, would have increased your standard ded"
+          },
+          {
+            "sentence_id": "irs_pub_334-s02618",
+            "chunk_id": "irs_pub_334-c0173",
+            "document_id": "irs_pub_334",
+            "page": 41,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "Business Use of Your Home"
+            ],
+            "score": 0.013420585542917252,
+            "reranker": 2.2609336376190186,
+            "text": "To qualify to deduct the expenses for the business use of your home under the principal place of business test, your home must be your principal place of business for that business."
+          }
+        ],
+        "unique_parent_chunks": 9
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_334-c0174",
+        "irs_pub_463-c0069",
+        "irs_pub_587-c0024",
+        "irs_pub_587-c0072"
+      ],
+      "parent_agreement": 0.4444444444444444
+    },
+    {
+      "query": "How is a partnership's income allocated to partners?",
+      "layout_x": {
+        "latency_ms": 1134.369292005431,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_541-c0047",
+            "document_id": "irs_pub_541",
+            "page": 12,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Contribution of Property"
+            ],
+            "score": 0.03125763311982155,
+            "reranker": 2.8322935104370117,
+            "sentence_count": 16,
+            "preview": "This rule applies to limited partnerships and general partnerships, regardless of whether they are privately formed or publicly syndicated. Contribution to fore"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0053",
+            "document_id": "irs_pub_541",
+            "page": 13,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Adjusted Basis"
+            ],
+            "score": 0.02704678475856781,
+            "reranker": 2.796137809753418,
+            "sentence_count": 20,
+            "preview": "Tip: There is a worksheet for adjusting the basis of a part- ner's interest in the partnership in the Partner's Instruc- tions for Schedule K-1 (Form 1065). The"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0080",
+            "document_id": "irs_pub_946",
+            "page": 20,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Partnerships and Partners"
+            ],
+            "score": 0.027240142226219177,
+            "reranker": 2.765653371810913,
+            "sentence_count": 16,
+            "preview": "The section 179 deduction limits apply both to the partner- ship and to each partner. The partnership determines its section 179 deduction subject to the limits"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0040",
+            "document_id": "irs_pub_541",
+            "page": 10,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Guaranteed Payments"
+            ],
+            "score": 0.022654958069324493,
+            "reranker": 2.601179599761963,
+            "sentence_count": 18,
+            "preview": "Guaranteed payments are those made by a partnership to a partner that are determined without regard to the part- nership's income. A partnership treats guarante"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0041",
+            "document_id": "irs_pub_541",
+            "page": 10,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Guaranteed Payments"
+            ],
+            "score": 0.023856578394770622,
+            "reranker": 2.579202651977539,
+            "sentence_count": 16,
+            "preview": "Example. Under a partnership agreement, Divya is to receive 30% of the partnership income, but not less than $8,000. The partnership has net income of $20,000. "
+          },
+          {
+            "chunk_id": "irs_pub_946-c0082",
+            "document_id": "irs_pub_946",
+            "page": 20,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Partnerships and Partners"
+            ],
+            "score": 0.029906954616308212,
+            "reranker": 2.572113275527954,
+            "sentence_count": 14,
+            "preview": "Dean's maximum section 179 deduction is $2,500,000. Dean elects to expense all of the $70,000 in section 179 deduc- tions allocated from the partnerships ($40,0"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0004",
+            "document_id": "irs_pub_541",
+            "page": 1,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Introduction"
+            ],
+            "score": 0.021072374656796455,
+            "reranker": 2.5465915203094482,
+            "sentence_count": 15,
+            "preview": "A partnership may have to withhold tax on distri- butions to a foreign partner or a foreign partner's distribu- tive share when it earns income not effectively "
+          },
+          {
+            "chunk_id": "irs_pub_541-c0003",
+            "document_id": "irs_pub_541",
+            "page": 1,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Introduction"
+            ],
+            "score": 0.025816993787884712,
+            "reranker": 2.508486032485962,
+            "sentence_count": 16,
+            "preview": "This publication provides supplemental federal income tax information for partnerships and partners. It supplements the information provided in the Instructions"
+          },
+          {
+            "chunk_id": "irs_pub_17-c0427",
+            "document_id": "irs_pub_17",
+            "page": 72,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Partnership Income"
+            ],
+            "score": 0.027912385761737823,
+            "reranker": 2.4969656467437744,
+            "sentence_count": 13,
+            "preview": "A partnership generally isn't a taxable entity. The income, gains, losses, deductions, and credits of a partnership are passed through to the partners based on "
+          },
+          {
+            "chunk_id": "irs_pub_541-c0049",
+            "document_id": "irs_pub_541",
+            "page": 12,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Contribution of Property"
+            ],
+            "score": 0.030751174315810204,
+            "reranker": 2.493243932723999,
+            "sentence_count": 19,
+            "preview": "To simplify this example, the depreciation de- ductions are determined without regard to any first-year depreciation conventions. However, because the partnersh"
+          }
+        ],
+        "candidate_sentences": 163
+      },
+      "layout_y": {
+        "latency_ms": 1149.1034170030616,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_541-s00584",
+            "chunk_id": "irs_pub_541-c0047",
+            "document_id": "irs_pub_541",
+            "page": 12,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Contribution of Property"
+            ],
+            "score": 0.03177805617451668,
+            "reranker": 2.9294180870056152,
+            "text": "The partnership must allocate among the partners any income, deduction, gain, or loss on the property in a manner that will account for the difference."
+          },
+          {
+            "sentence_id": "irs_pub_541-s00861",
+            "chunk_id": "irs_pub_541-c0064",
+            "document_id": "irs_pub_541",
+            "page": 17,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Payments for Unrealized Receivables and Inventory Items"
+            ],
+            "score": 0.018790777772665024,
+            "reranker": 2.8358383178710938,
+            "text": "The income or loss real- ized by a partner upon the sale or exchange of its interest in unrealized receivables and inventory items, discussed below, is the amount that would have been allocated to the"
+          },
+          {
+            "sentence_id": "irs_pub_541-s00774",
+            "chunk_id": "irs_pub_541-c0058",
+            "document_id": "irs_pub_541",
+            "page": 15,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Effect of Partnership Liabilities"
+            ],
+            "score": 0.020483462139964104,
+            "reranker": 2.8280398845672607,
+            "text": "All items of income, gain, loss, or deduction are allo- cated to the partners."
+          },
+          {
+            "sentence_id": "irs_pub_946-s01049",
+            "chunk_id": "irs_pub_946-c0080",
+            "document_id": "irs_pub_946",
+            "page": 20,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "Partnerships and Partners"
+            ],
+            "score": 0.02548176422715187,
+            "reranker": 2.813861131668091,
+            "text": "Each partner adds the amount allocated from partner- ships (shown on Schedule K-1 (Form 1065), Partner's Share of Income, Deductions, Credits, etc.)"
+          },
+          {
+            "sentence_id": "irs_pub_541-s00151",
+            "chunk_id": "irs_pub_541-c0014",
+            "document_id": "irs_pub_541",
+            "page": 4,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Partnership Interests Held in Connection With Performance of Services"
+            ],
+            "score": 0.016129031777381897,
+            "reranker": 2.619611978530884,
+            "text": "Capital gains recognized by a partnership, allocated to a partner with respect to an API."
+          },
+          {
+            "sentence_id": "irs_pub_541-s00015",
+            "chunk_id": "irs_pub_541-c0003",
+            "document_id": "irs_pub_541",
+            "page": 1,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Introduction"
+            ],
+            "score": 0.01892462745308876,
+            "reranker": 2.610395908355713,
+            "text": "Generally, a partnership doesn't pay tax on its income but passes through any profits or losses to its partners."
+          },
+          {
+            "sentence_id": "irs_pub_541-s00483",
+            "chunk_id": "irs_pub_541-c0041",
+            "document_id": "irs_pub_541",
+            "page": 10,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Guaranteed Payments"
+            ],
+            "score": 0.022657450288534164,
+            "reranker": 2.591963529586792,
+            "text": "Divya's income from the partnership is $8,000, and the remaining $12,000 of partnership income will be reported by the other partners in proportion to their shares under the partnership agreement."
+          },
+          {
+            "sentence_id": "irs_pub_541-s00599",
+            "chunk_id": "irs_pub_541-c0049",
+            "document_id": "irs_pub_541",
+            "page": 12,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Contribution of Property"
+            ],
+            "score": 0.018108798190951347,
+            "reranker": 2.547300338745117,
+            "text": "However, because the partnership is allowed only $400 per year of depreciation (10% of $4,000), no more than $400 can be allocated between the partners."
+          },
+          {
+            "sentence_id": "irs_pub_541-s00222",
+            "chunk_id": "irs_pub_541-c0022",
+            "document_id": "irs_pub_541",
+            "page": 5,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Exclusion From Partnership Rules"
+            ],
+            "score": 0.020600413903594017,
+            "reranker": 2.482964277267456,
+            "text": "All the partners must agree to make the choice, and the partners must be able to figure their own taxable income without figuring the partnership's income."
+          },
+          {
+            "sentence_id": "irs_pub_17-s06563",
+            "chunk_id": "irs_pub_17-c0427",
+            "document_id": "irs_pub_17",
+            "page": 72,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals",
+              "Partnership Income"
+            ],
+            "score": 0.025974027812480927,
+            "reranker": 2.47162127494812,
+            "text": "The income, gains, losses, deductions, and credits of a partnership are passed through to the partners based on each partner's distribu- tive share of these items."
+          }
+        ],
+        "unique_parent_chunks": 10
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_17-c0427",
+        "irs_pub_541-c0003",
+        "irs_pub_541-c0041",
+        "irs_pub_541-c0047",
+        "irs_pub_541-c0049",
+        "irs_pub_946-c0080"
+      ],
+      "parent_agreement": 0.6
+    },
+    {
+      "query": "What is the difference between a sole proprietorship and an LLC for tax purposes?",
+      "layout_x": {
+        "latency_ms": 1171.3646249845624,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_334-c0006",
+            "document_id": "irs_pub_334",
+            "page": 2,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You Self-Employed?"
+            ],
+            "score": 0.03151364624500275,
+            "reranker": 2.9159483909606934,
+            "sentence_count": 20,
+            "preview": "You are a self-employed person if you carry on a trade or business as a sole proprietor or an independent contractor. You do not have to carry on regular full-t"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0019",
+            "document_id": "irs_pub_583",
+            "page": 6,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Income Tax"
+            ],
+            "score": 0.0314980149269104,
+            "reranker": 2.6359176635742188,
+            "sentence_count": 16,
+            "preview": "If you do not pay your tax through withhold- ing, or do not pay enough tax that way, you might have to pay estimated tax. If you are not required to make estima"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0010",
+            "document_id": "irs_pub_541",
+            "page": 3,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Organizations Classified as Partnerships"
+            ],
+            "score": 0.03333333507180214,
+            "reranker": 2.570695400238037,
+            "sentence_count": 19,
+            "preview": "For more information, see the instructions for Form 8832. Limited liability company (LLC). An LLC is an entity formed under state law by filing articles of orga"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0006",
+            "document_id": "irs_pub_583",
+            "page": 2,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Table 1. What New Business Owners Need To Know About Federal Taxes"
+            ],
+            "score": 0.03201844170689583,
+            "reranker": 2.5318808555603027,
+            "sentence_count": 39,
+            "preview": "(Note: This table is intended to help you, as a new business owner, learn what you need to know about your federal tax responsibilities. To use it, ask yourself"
+          },
+          {
+            "chunk_id": "irs_pub_946-c0260",
+            "document_id": "irs_pub_946",
+            "page": 66,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "How To Get Tax Help"
+            ],
+            "score": 0.018608273938298225,
+            "reranker": 2.393460750579834,
+            "sentence_count": 19,
+            "preview": "For more information on how to choose a tax preparer, go to Tips for Choosing a Tax Preparer on IRS.gov. Employers can register to use Business Services On- lin"
+          },
+          {
+            "chunk_id": "irs_pub_463-c0194",
+            "document_id": "irs_pub_463",
+            "page": 52,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "How To Get Tax Help"
+            ],
+            "score": 0.018433570861816406,
+            "reranker": 2.3140597343444824,
+            "sentence_count": 19,
+            "preview": "Although the tax preparer always signs the return, you're ultimately responsible for providing all the information required for the preparer to accurately prepa"
+          },
+          {
+            "chunk_id": "irs_pub_334-c0009",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Business Owned and Operated by Spouses"
+            ],
+            "score": 0.028991596773266792,
+            "reranker": 2.297488212585449,
+            "sentence_count": 19,
+            "preview": "If you and your spouse jointly own and operate an unincorporated business and share in the profits and losses, you are partners in a partnership, whether or not"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0016",
+            "document_id": "irs_pub_541",
+            "page": 4,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "Qualified Joint Venture Election"
+            ],
+            "score": 0.02854251116514206,
+            "reranker": 2.250919818878174,
+            "sentence_count": 9,
+            "preview": "A qualified joint venture, whose only members are spou- ses filing a joint return, can elect not to be treated as a partnership for federal tax purposes. A qual"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0009",
+            "document_id": "irs_pub_583",
+            "page": 3,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Table 1. What New Business Owners Need To Know About Federal Taxes"
+            ],
+            "score": 0.029906954616308212,
+            "reranker": 2.236785411834717,
+            "sentence_count": 10,
+            "preview": "An eligible domestic corporation (or a domestic entity eligible to elect to be treated as a corpora- tion) can avoid double taxation (once to the corporation an"
+          },
+          {
+            "chunk_id": "irs_pub_542-c0008",
+            "document_id": "irs_pub_542",
+            "page": 2,
+            "section_path": [
+              "Businesses Taxed as Corporations"
+            ],
+            "score": 0.027912385761737823,
+            "reranker": 2.2199923992156982,
+            "sentence_count": 29,
+            "preview": "The rules used to determine whether a business is taxed as a corporation changed for businesses formed after 1996. Business formed before 1997. A business forme"
+          }
+        ],
+        "candidate_sentences": 199
+      },
+      "layout_y": {
+        "latency_ms": 1268.6252080020495,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_334-s00205",
+            "chunk_id": "irs_pub_334-c0006",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You Self-Employed?"
+            ],
+            "score": 0.03253968432545662,
+            "reranker": 2.9372165203094482,
+            "text": "You are also a sole proprietor for income tax purposes if you are an indi- vidual and the sole member of a domestic LLC unless you elect to have the LLC treated as a corporation."
+          },
+          {
+            "sentence_id": "irs_pub_334-s03148",
+            "chunk_id": "irs_pub_334-c0212",
+            "document_id": "irs_pub_334",
+            "page": 50,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C) \u2014 Employees' Pay",
+              "How To Get Tax Help"
+            ],
+            "score": 0.022171750664711,
+            "reranker": 2.630246162414551,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a sin- gle-member limited liability company (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_334-s00201",
+            "chunk_id": "irs_pub_334-c0006",
+            "document_id": "irs_pub_334",
+            "page": 3,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Are You Self-Employed?"
+            ],
+            "score": 0.02103433385491371,
+            "reranker": 2.585582971572876,
+            "text": "Generally, for income tax purposes, a single-member LLC is disregarded as an entity separate from its owner and reports its income and deductions on its owner's federal income tax return."
+          },
+          {
+            "sentence_id": "irs_pub_17-s23416",
+            "chunk_id": "irs_pub_17-c0823",
+            "document_id": "irs_pub_17",
+            "page": 130,
+            "section_path": [
+              "Your Federal Income Tax For Individuals \u2014 TAX GUIDE 2025 \u2014 FOR INDIVIDUALS \u2014 Your Federal Income Tax For Individuals \u2014 2025 Standard Deduction Tables \u2014 2025 Tax Computation Worksheet-Line 16 \u2014 2025 Tax Rate Schedules \u2014 Your Rights as a Taxpayer",
+              "How To Get Tax Help"
+            ],
+            "score": 0.02235022932291031,
+            "reranker": 2.490053653717041,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a single-member limited liability com- pany (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_541-s01147",
+            "chunk_id": "irs_pub_541-c0094",
+            "document_id": "irs_pub_541",
+            "page": 23,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships",
+              "How To Get Tax Help"
+            ],
+            "score": 0.022934064269065857,
+            "reranker": 2.4753432273864746,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a sin- gle-member limited liability company (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_946-s03939",
+            "chunk_id": "irs_pub_946-c0260",
+            "document_id": "irs_pub_946",
+            "page": 66,
+            "section_path": [
+              "Publication 946 How To Depreciate Property",
+              "How To Get Tax Help"
+            ],
+            "score": 0.0217013880610466,
+            "reranker": 2.474457025527954,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a sin- gle-member limited liability company (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_544-s03584",
+            "chunk_id": "irs_pub_544-c0226",
+            "document_id": "irs_pub_544",
+            "page": 58,
+            "section_path": [
+              "Sales and Other Dispositions of Assets \u2014 Foreclosures and Repossessions \u2014 Noncapital Assets \u2014 Nondeductible Loss",
+              "How To Get Tax Help"
+            ],
+            "score": 0.02388019487261772,
+            "reranker": 2.470912218093872,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a sin- gle-member limited liability company (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_463-s03232",
+            "chunk_id": "irs_pub_463-c0194",
+            "document_id": "irs_pub_463",
+            "page": 53,
+            "section_path": [
+              "Publication 463 Travel, Gift, and Car Expenses \u2014 Depreciation Deduction \u2014 Maximum Depreciation Deduction for Cars Placed in Service Prior to 2018",
+              "How To Get Tax Help"
+            ],
+            "score": 0.020841486752033234,
+            "reranker": 2.350304126739502,
+            "text": "If you are a sole proprietor, a partnership, an S corporation, a C corporation, or a sin- gle-member limited liability company (LLC), you can view your tax information on record with the IRS and do mo"
+          },
+          {
+            "sentence_id": "irs_pub_583-s00193",
+            "chunk_id": "irs_pub_583-c0006",
+            "document_id": "irs_pub_583",
+            "page": 3,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Table 1. What New Business Owners Need To Know About Federal Taxes"
+            ],
+            "score": 0.025362320244312286,
+            "reranker": 2.3380749225616455,
+            "text": "A sole proprietorship is an unin- corporated business that is owned by one individual."
+          },
+          {
+            "sentence_id": "irs_pub_583-s00271",
+            "chunk_id": "irs_pub_583-c0011",
+            "document_id": "irs_pub_583",
+            "page": 4,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Employer Identification Number (EIN)"
+            ],
+            "score": 0.029138512909412384,
+            "reranker": 2.308919906616211,
+            "text": "EINs are assigned to sole proprietors, LLCs, corporations, and partnerships for tax filing and reporting purposes."
+          }
+        ],
+        "unique_parent_chunks": 9
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_334-c0006",
+        "irs_pub_463-c0194",
+        "irs_pub_583-c0006",
+        "irs_pub_946-c0260"
+      ],
+      "parent_agreement": 0.4444444444444444
+    },
+    {
+      "query": "When must an employer file Form 941?",
+      "layout_x": {
+        "latency_ms": 2132.937917020172,
+        "hits": [
+          {
+            "chunk_id": "irs_pub_334-c0041",
+            "document_id": "irs_pub_334",
+            "page": 11,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Table 1-2. Which Forms Must I File?"
+            ],
+            "score": 0.030000001192092896,
+            "reranker": 2.577075719833374,
+            "sentence_count": 33,
+            "preview": "IF you are liable for ... THEN use Form ... DUE by ... 1 Income tax 1040, or 1040-SR, and Schedule C2 15th day of 4th month after end of tax year. Self-employme"
+          },
+          {
+            "chunk_id": "irs_pub_334-c0048",
+            "document_id": "irs_pub_334",
+            "page": 13,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Table 1-3. Going Out of Business Checklists"
+            ],
+            "score": 0.0260210819542408,
+            "reranker": 2.4462766647338867,
+            "sentence_count": 18,
+            "preview": "(Note: The following checklists highlight the typical final forms and schedules you may need to file if you go out of business. For more information, see the in"
+          },
+          {
+            "chunk_id": "irs_pub_542-c0091",
+            "document_id": "irs_pub_542",
+            "page": 23,
+            "section_path": [
+              "Low Income Taxpayer Clinics (LITCs) \u2014 Other Useful Forms for Corporations"
+            ],
+            "score": 0.030751174315810204,
+            "reranker": 2.4374148845672607,
+            "sentence_count": 24,
+            "preview": "Other Useful Forms Form Use this form to- W-2 and W-3-Wage and Tax Statement; and Transmittal of Wage and Tax Statements Report wages, tips, and other compensat"
+          },
+          {
+            "chunk_id": "irs_pub_541-c0111",
+            "document_id": "irs_pub_541",
+            "page": 30,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships \u2014 The Taxpayer Advocate Service (TAS) Is Here To Help You \u2014 Section 1061 Worksheets and Tables \u2014 Section 1061 Worksheet B \u2014 Other Useful Forms for Partnerships"
+            ],
+            "score": 0.032786883413791656,
+            "reranker": 2.3854851722717285,
+            "sentence_count": 19,
+            "preview": "Form, Return, or Statement Use this to- W-2 and W-3-Wage and Tax Statement; and Transmittal of Wage and Tax Statements Report wages, tips, other compensation, a"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0018",
+            "document_id": "irs_pub_583",
+            "page": 5,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Income Tax"
+            ],
+            "score": 0.03125763311982155,
+            "reranker": 2.3783957958221436,
+            "sentence_count": 55,
+            "preview": "All businesses except partnerships must file an annual in- come tax return. Partnerships file an information return. Table 2. Which Forms Must I File? IF you ar"
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0120",
+            "document_id": "irs_pub_15b",
+            "page": 32,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "4. Rules for Withholding, Depositing, and Reporting"
+            ],
+            "score": 0.026709401980042458,
+            "reranker": 2.3386952877044678,
+            "sentence_count": 14,
+            "preview": "\u00b7 Including the value of the benefits in boxes 1, 3, 5, and 14 on a timely furnished Form W-2. For use of a sepa- rate statement in lieu of using box 14, see th"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0022",
+            "document_id": "irs_pub_583",
+            "page": 7,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Federal Income, Social Security, and Medicare Taxes"
+            ],
+            "score": 0.031054403632879257,
+            "reranker": 2.337897777557373,
+            "sentence_count": 14,
+            "preview": "You generally must withhold federal income tax from your employee's wages. To figure how much federal income tax to withhold from each wage payment, use the emp"
+          },
+          {
+            "chunk_id": "irs_pub_15b-c0005",
+            "document_id": "irs_pub_15b",
+            "page": 2,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits",
+              "What's New"
+            ],
+            "score": 0.02684684842824936,
+            "reranker": 2.242811441421509,
+            "sentence_count": 20,
+            "preview": "See Working Condition Benefits, later. Direct deposit of employment tax refunds now availa- ble. EO 14247, Modernizing Payments To and From America's Bank Accou"
+          },
+          {
+            "chunk_id": "irs_pub_544-c0242",
+            "document_id": "irs_pub_544",
+            "page": 63,
+            "section_path": [
+              "Sales and Other Dispositions of Assets \u2014 Foreclosures and Repossessions \u2014 Noncapital Assets \u2014 Nondeductible Loss \u2014 Tax Publications for Business Taxpayers See How To Get Tax Help for a variety of ways to get publications, including by computer, phone, and mail.",
+              "Spanish Language Publications"
+            ],
+            "score": 0.012987012974917889,
+            "reranker": 2.2224292755126953,
+            "sentence_count": 65,
+            "preview": "1SP Derechos del Contribuyente 15SP Gu\u00eda Tributaria para Empleadores 17SP El Impuesto Federal sobre los Ingresos Para Personas F\u00edsicas 179 (Circular PR), Gu\u00eda C"
+          },
+          {
+            "chunk_id": "irs_pub_583-c0011",
+            "document_id": "irs_pub_583",
+            "page": 4,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Employer Identification Number (EIN)"
+            ],
+            "score": 0.014925372786819935,
+            "reranker": 2.1967194080352783,
+            "sentence_count": 25,
+            "preview": "EINs are assigned to sole proprietors, LLCs, corporations, and partnerships for tax filing and reporting purposes. See Form SS-4 and its instructions for more i"
+          }
+        ],
+        "candidate_sentences": 287
+      },
+      "layout_y": {
+        "latency_ms": 2269.410750013776,
+        "hits": [
+          {
+            "sentence_id": "irs_pub_583-s00512",
+            "chunk_id": "irs_pub_583-c0022",
+            "document_id": "irs_pub_583",
+            "page": 7,
+            "section_path": [
+              "Starting a Business and Keeping Records",
+              "Federal Income, Social Security, and Medicare Taxes"
+            ],
+            "score": 0.03279569745063782,
+            "reranker": 2.56927752494812,
+            "text": "Report these taxes on Form 941, Employer's QUARTERLY Federal Tax Return, or Form 944, Employer's ANNUAL Federal Tax Return. ("
+          },
+          {
+            "sentence_id": "irs_pub_334-s00818",
+            "chunk_id": "irs_pub_334-c0048",
+            "document_id": "irs_pub_334",
+            "page": 13,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Table 1-3. Going Out of Business Checklists"
+            ],
+            "score": 0.027012523263692856,
+            "reranker": 2.516993284225464,
+            "text": ":unselected: File Form 941 for the calendar quarter (or Form 944 for the year) in which you make final wage payments."
+          },
+          {
+            "sentence_id": "irs_pub_542-s00287",
+            "chunk_id": "irs_pub_542-c0017",
+            "document_id": "irs_pub_542",
+            "page": 5,
+            "section_path": [
+              "Income Tax Return"
+            ],
+            "score": 0.011828773654997349,
+            "reranker": 2.51663875579834,
+            "text": "return must generally file by the 15th day of the 4th month after the short period ends."
+          },
+          {
+            "sentence_id": "irs_pub_542-s01336",
+            "chunk_id": "irs_pub_542-c0091",
+            "document_id": "irs_pub_542",
+            "page": 23,
+            "section_path": [
+              "Low Income Taxpayer Clinics (LITCs) \u2014 Other Useful Forms for Corporations"
+            ],
+            "score": 0.03128054738044739,
+            "reranker": 2.468076467514038,
+            "text": "941-Employer's QUARTERLY Federal Tax Return"
+          },
+          {
+            "sentence_id": "irs_pub_15b-s01886",
+            "chunk_id": "irs_pub_15b-c0120",
+            "document_id": "irs_pub_15b",
+            "page": 32,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits \u2014 Accident and Health Benefits",
+              "4. Rules for Withholding, Depositing, and Reporting"
+            ],
+            "score": 0.02567901276051998,
+            "reranker": 2.4475173950195312,
+            "text": "You must report the actual value on Form 941 (or Form 943, 944, or CT-1) and Form W-2."
+          },
+          {
+            "sentence_id": "irs_pub_334-s00689",
+            "chunk_id": "irs_pub_334-c0041",
+            "document_id": "irs_pub_334",
+            "page": 11,
+            "section_path": [
+              "Tax Guide for Small Business (For Individuals Who Use Schedule C)",
+              "Table 1-2. Which Forms Must I File?"
+            ],
+            "score": 0.013888888992369175,
+            "reranker": 2.341708183288574,
+            "text": "941 or 944"
+          },
+          {
+            "sentence_id": "irs_pub_542-s01341",
+            "chunk_id": "irs_pub_542-c0091",
+            "document_id": "irs_pub_542",
+            "page": 23,
+            "section_path": [
+              "Low Income Taxpayer Clinics (LITCs) \u2014 Other Useful Forms for Corporations"
+            ],
+            "score": 0.02921108715236187,
+            "reranker": 2.2613322734832764,
+            "text": "File annual Form 944 instead of filing quarterly Forms 941, if the IRS notified you in writing."
+          },
+          {
+            "sentence_id": "irs_pub_541-s01475",
+            "chunk_id": "irs_pub_541-c0111",
+            "document_id": "irs_pub_541",
+            "page": 30,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships \u2014 The Taxpayer Advocate Service (TAS) Is Here To Help You \u2014 Section 1061 Worksheets and Tables \u2014 Section 1061 Worksheet B \u2014 Other Useful Forms for Partnerships"
+            ],
+            "score": 0.029906954616308212,
+            "reranker": 2.2460014820098877,
+            "text": "941-Employer's QUARTERLY Federal Tax Return"
+          },
+          {
+            "sentence_id": "irs_pub_15b-s00124",
+            "chunk_id": "irs_pub_15b-c0005",
+            "document_id": "irs_pub_15b",
+            "page": 2,
+            "section_path": [
+              "Publication 15-B Employer's Tax Guide to Fringe Benefits",
+              "What's New"
+            ],
+            "score": 0.015056664124131203,
+            "reranker": 2.234171152114868,
+            "text": "You can now access Form 940, Form 941, Form 943, Form 944, and Form 945 return transcripts for tax years 2023 and later using your IRS business tax ac- count."
+          },
+          {
+            "sentence_id": "irs_pub_541-s01480",
+            "chunk_id": "irs_pub_541-c0111",
+            "document_id": "irs_pub_541",
+            "page": 30,
+            "section_path": [
+              "Publication 541 (Rev. December 2025) \u2014 Partnerships \u2014 The Taxpayer Advocate Service (TAS) Is Here To Help You \u2014 Section 1061 Worksheets and Tables \u2014 Section 1061 Worksheet B \u2014 Other Useful Forms for Partnerships"
+            ],
+            "score": 0.029469121247529984,
+            "reranker": 2.1915018558502197,
+            "text": "File annual Form 944 instead of filing quarterly Forms 941 if the IRS notified you in writing."
+          }
+        ],
+        "unique_parent_chunks": 8
+      },
+      "y_parent_chunks_also_in_x": [
+        "irs_pub_15b-c0005",
+        "irs_pub_15b-c0120",
+        "irs_pub_334-c0041",
+        "irs_pub_334-c0048",
+        "irs_pub_541-c0111",
+        "irs_pub_542-c0091",
+        "irs_pub_583-c0022"
+      ],
+      "parent_agreement": 0.875
+    }
+  ],
+  "summary": {
+    "queries": 10,
+    "x_latency_ms_median": 1214.7067289915867,
+    "y_latency_ms_median": 1229.187645483762,
+    "x_latency_ms_max": 2268.2678750134073,
+    "y_latency_ms_max": 2269.410750013776,
+    "parent_agreement_mean": 0.6275,
+    "parent_agreement_min": 0.3
+  }
+}

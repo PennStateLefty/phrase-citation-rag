@@ -19,7 +19,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from sentcite.config import AzureConfig  # noqa: E402
-from sentcite.indexing import ensure_chunks_index, load_chunks_from_jsonl, upload_chunks  # noqa: E402
+from sentcite.indexing import (  # noqa: E402
+    ensure_chunks_index,
+    ensure_sentences_index,
+    load_chunks_from_jsonl,
+    upload_chunks,
+    upload_sentences,
+)
 
 
 CHUNKS_DIR = REPO_ROOT / "data" / "chunks"
@@ -32,12 +38,22 @@ def main() -> int:
     p.add_argument("--only", action="append", default=[], help="Restrict upload to these document_ids.")
     p.add_argument("--batch-size", type=int, default=100)
     p.add_argument("--embed-batch-size", type=int, default=64)
+    p.add_argument(
+        "--layout",
+        choices=["chunks", "sentences", "both"],
+        default="chunks",
+        help="chunks = Layout X, sentences = Layout Y spike, both = populate both indices.",
+    )
     args = p.parse_args()
 
     cfg = AzureConfig.from_env()
 
-    name = ensure_chunks_index(cfg, recreate=args.recreate)
-    print(f"[index] ensured {name!r} (recreate={args.recreate})")
+    if args.layout in ("chunks", "both"):
+        name = ensure_chunks_index(cfg, recreate=args.recreate)
+        print(f"[index] ensured {name!r} (recreate={args.recreate})")
+    if args.layout in ("sentences", "both"):
+        sname = ensure_sentences_index(cfg, recreate=args.recreate)
+        print(f"[index] ensured {sname!r} (recreate={args.recreate})")
     if args.ensure_only:
         return 0
 
@@ -49,24 +65,40 @@ def main() -> int:
         print(f"No chunk files in {CHUNKS_DIR} (or --only filtered everything).", file=sys.stderr)
         return 1
 
-    grand_totals = {"chunks": 0, "sentences": 0}
+    grand = {"chunks": 0, "sentences_nested": 0, "sentences_index": 0}
     for path in files:
         chunks = load_chunks_from_jsonl(path)
         t0 = time.perf_counter()
-        counts = upload_chunks(
-            chunks,
-            cfg=cfg,
-            batch_size=args.batch_size,
-            embed_batch_size=args.embed_batch_size,
-        )
+        c_counts = {"chunks": 0, "sentences": 0}
+        s_counts = {"sentences": 0}
+        if args.layout in ("chunks", "both"):
+            c_counts = upload_chunks(
+                chunks,
+                cfg=cfg,
+                batch_size=args.batch_size,
+                embed_batch_size=args.embed_batch_size,
+            )
+        if args.layout in ("sentences", "both"):
+            s_counts = upload_sentences(
+                chunks,
+                cfg=cfg,
+                batch_size=max(args.batch_size, 200),
+                embed_batch_size=args.embed_batch_size,
+            )
         dt = time.perf_counter() - t0
-        grand_totals["chunks"] += counts["chunks"]
-        grand_totals["sentences"] += counts["sentences"]
+        grand["chunks"] += c_counts["chunks"]
+        grand["sentences_nested"] += c_counts["sentences"]
+        grand["sentences_index"] += s_counts["sentences"]
         print(
-            f"[upload] {path.stem:16s} chunks={counts['chunks']:4d} "
-            f"sentences={counts['sentences']:5d} elapsed={dt:6.1f}s"
+            f"[upload] {path.stem:16s} chunks={c_counts['chunks']:4d} "
+            f"sent_nested={c_counts['sentences']:5d} "
+            f"sent_index={s_counts['sentences']:5d} elapsed={dt:6.1f}s"
         )
-    print(f"[done] chunks={grand_totals['chunks']} sentences={grand_totals['sentences']}")
+    print(
+        f"[done] chunks={grand['chunks']} "
+        f"sent_nested={grand['sentences_nested']} "
+        f"sent_index={grand['sentences_index']}"
+    )
     return 0
 
 

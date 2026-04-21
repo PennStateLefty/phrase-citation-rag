@@ -7,9 +7,11 @@ from unittest.mock import MagicMock, patch
 from sentcite.indexing import (
     EMBEDDING_DIMENSIONS,
     build_chunks_index,
+    build_sentences_index,
     chunk_to_search_doc,
     embed_texts,
     upload_chunks,
+    upload_sentences,
 )
 from sentcite.schema import Chunk, Sentence
 
@@ -135,3 +137,49 @@ def test_upload_chunks_batches_and_counts():
     assert counts == {"chunks": 5, "sentences": 10}
     # 5 chunks, batch_size=2 -> 3 upload_documents calls.
     assert fake_search.upload_documents.call_count == 3
+
+
+def test_build_sentences_index_schema():
+    idx = build_sentences_index("sent-idx")
+    names = {f.name for f in idx.fields}
+    assert {"sentence_id", "chunk_id", "document_id", "page", "section_path",
+            "text", "token_count", "sentence_vector"} <= names
+    key = next(f for f in idx.fields if f.name == "sentence_id")
+    assert key.key is True
+    vec = next(f for f in idx.fields if f.name == "sentence_vector")
+    assert vec.vector_search_dimensions == EMBEDDING_DIMENSIONS
+    assert idx.vector_search is not None
+    assert idx.semantic_search.configurations[0].name == "default"
+
+
+def test_upload_sentences_dedupes_by_sentence_id():
+    # Two chunks share sentence_id 'doc1-s00000' (overlap case); the
+    # sentence index should see it only once.
+    c1 = _chunk("doc1", 0)
+    c2 = Chunk(
+        chunk_id="doc1-c0001",
+        document_id="doc1",
+        page=1,
+        section_path=["T", "H"],
+        text="First sentence. Third sentence.",
+        token_count=6,
+        sentences=[
+            c1.sentences[0],  # same sentence_id as in c1
+            _sent("doc1", 99, "Third sentence.", chunk_id="doc1-c0001"),
+        ],
+    )
+    fake_search = MagicMock()
+    cfg = _cfg()
+    with patch("sentcite.indexing._sentences_client", return_value=fake_search), \
+         patch("sentcite.indexing.embed_texts",
+               side_effect=lambda texts, **kw: [[0.0] * EMBEDDING_DIMENSIONS for _ in texts]):
+        counts = upload_sentences([c1, c2], cfg=cfg, batch_size=10)
+    # c1 has 2 sentences, c2 adds 1 new (the other dedups). Total unique = 3.
+    assert counts == {"sentences": 3}
+    assert fake_search.upload_documents.call_count == 1
+    uploaded = fake_search.upload_documents.call_args.kwargs["documents"]
+    assert len(uploaded) == 3
+    ids = [d["sentence_id"] for d in uploaded]
+    assert len(set(ids)) == 3
+    assert all("sentence_vector" in d and len(d["sentence_vector"]) == EMBEDDING_DIMENSIONS
+               for d in uploaded)
