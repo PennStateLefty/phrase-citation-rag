@@ -21,19 +21,39 @@ in-the-loop steps.
 
 ## Quick start
 
-```bash
-# 1. Install
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-python -m spacy download en_core_web_sm
+**This project is venv-first.** All Python commands (`pytest`, `jupyter`,
+`python -m sentcite.*`, notebook kernels) must run inside `./.venv`.
+Never `pip install` into a global/system Python.
 
-# 2. Configure
+```bash
+# 1. One-shot bootstrap: creates .venv, installs sentcite + dev extras,
+#    downloads the spaCy model, and registers a Jupyter kernel named
+#    "Python (sentcite .venv)".
+./scripts/bootstrap.sh
+
+# 2. Activate before running anything
+source .venv/bin/activate
+
+# 3. Configure Azure
 cp .env.example .env
 # fill in Azure endpoints/keys
 
-# 3. Provision Azure resources (see infra/)
-# 4. Walk the notebooks in order: 01 → 05
+# 4. Provision Azure resources (see infra/)
+# 5. Walk the notebooks in order: 01 → 05
+#    In Jupyter, select the "Python (sentcite .venv)" kernel.
 ```
+
+### Verifying the venv is active
+
+```bash
+which python   # should print .../sentence-citation-prototype/.venv/bin/python
+pytest         # should collect tests from ./tests
+```
+
+If `which python` does not point into `.venv`, stop and re-run
+`source .venv/bin/activate` — running commands against the system
+Python will produce confusing "module not found" errors and may pollute
+your global packages.
 
 ## Repo layout
 
