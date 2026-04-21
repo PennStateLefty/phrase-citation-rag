@@ -1,13 +1,26 @@
 // main.bicep — Azure resources for the sentence-citation-prototype.
 //
+// Foundry resource model: post-Ignite 2025 ("Microsoft Foundry vNext"), i.e.
+// Microsoft.CognitiveServices/accounts kind=AIServices with
+// allowProjectManagement=true + an accounts/projects child. This is the
+// current GA "Foundry Resource" type per the official Bicep quickstart
+// (microsoft-foundry/foundry-samples/infrastructure-setup-bicep/00-basic).
+// API version 2025-06-01 (stable).
+//
 // Provisions:
 //   - Storage Account + 2 blob containers (raw-pdfs, parsed)
 //   - Azure AI Document Intelligence (Cognitive Services kind=FormRecognizer)
-//   - Azure AI Search (standard SKU, semantic ranker enabled)
-//   - Azure OpenAI with two deployments: gpt-4o + text-embedding-3-large
+//   - Azure AI Search (standard SKU by default, semantic ranker enabled)
+//   - Azure AI Foundry account + project (vNext) with two Azure OpenAI
+//     model deployments: gpt-4o + text-embedding-3-large.
 //
-// No secrets are emitted as outputs. Keys must be fetched via `az` by deploy.sh
-// and written to the local .env file.
+// Additional Foundry model-catalog models (e.g. Llama-3.3-70B, Mistral
+// Large 2, DeepSeek, Phi-4) are NOT deployed here because MaaS model
+// availability varies by region and requires Marketplace T&Cs. Deploy
+// those interactively from the Foundry portal; see infra/README.md.
+//
+// No secrets are emitted as outputs. Keys must be fetched via `az` by
+// deploy.sh and written to the local .env file.
 
 @description('Location for all resources. Must be a region where Azure OpenAI + the requested models are available.')
 param location string = resourceGroup().location
@@ -27,8 +40,17 @@ param searchSku string = 'standard'
 param searchReplicas int = 1
 param searchPartitions int = 1
 
-@description('Azure OpenAI SKU.')
+@description('Foundry / Azure OpenAI SKU.')
 param openaiSku string = 'S0'
+
+@description('Name of the Foundry project created under the AI Services account.')
+param foundryProjectName string = 'sentcite'
+
+@description('Friendly display name of the Foundry project.')
+param foundryProjectDisplayName string = 'Sentence Citation Prototype'
+
+@description('Description of the Foundry project.')
+param foundryProjectDescription string = 'Phase 1 prototype for sentence-level citation RAG over public IRS/Treasury corpus.'
 
 @description('Chat deployment model name.')
 param chatModel string = 'gpt-4o'
@@ -45,6 +67,10 @@ param embeddingModel string = 'text-embedding-3-large'
 @description('Embedding deployment model version.')
 param embeddingModelVersion string = '1'
 
+@description('Embedding deployment SKU name. GlobalStandard is broadly available; some regions do not offer Standard for text-embedding-3-large.')
+@allowed([ 'Standard', 'GlobalStandard' ])
+param embeddingSkuName string = 'GlobalStandard'
+
 @description('Embedding deployment capacity (TPM, thousands).')
 param embeddingCapacity int = 100
 
@@ -53,7 +79,7 @@ var shortUniq = substring(uniq, 0, 6)
 var storageName = take(toLower('${namePrefix}${uniq}'), 24)
 var docIntelName = '${namePrefix}-docintel-${shortUniq}'
 var searchName = take('${namePrefix}-search-${shortUniq}', 60)
-var openaiName = take('${namePrefix}-openai-${shortUniq}', 60)
+var foundryName = take('${namePrefix}-foundry-${shortUniq}', 60)
 
 resource storage 'Microsoft.Storage/storageAccounts@2023-05-01' = {
   name: storageName
@@ -105,19 +131,33 @@ resource search 'Microsoft.Search/searchServices@2024-06-01-preview' = {
   }
 }
 
-resource openai 'Microsoft.CognitiveServices/accounts@2024-10-01' = {
-  name: openaiName
+resource foundry 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
+  name: foundryName
   location: location
-  kind: 'OpenAI'
+  kind: 'AIServices'
   sku: { name: openaiSku }
+  identity: { type: 'SystemAssigned' }
   properties: {
-    customSubDomainName: openaiName
+    customSubDomainName: foundryName
     publicNetworkAccess: 'Enabled'
+    allowProjectManagement: true
+    disableLocalAuth: false
   }
 }
 
-resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = {
-  parent: openai
+resource foundryProject 'Microsoft.CognitiveServices/accounts/projects@2025-06-01' = {
+  parent: foundry
+  name: foundryProjectName
+  location: location
+  identity: { type: 'SystemAssigned' }
+  properties: {
+    displayName: foundryProjectDisplayName
+    description: foundryProjectDescription
+  }
+}
+
+resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
+  parent: foundry
   name: chatModel
   sku: {
     name: 'GlobalStandard'
@@ -134,11 +174,11 @@ resource chatDeployment 'Microsoft.CognitiveServices/accounts/deployments@2024-1
 }
 
 // Sequential to avoid a 429 on concurrent deployment creation.
-resource embeddingDeployment 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = {
-  parent: openai
+resource embeddingDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
+  parent: foundry
   name: embeddingModel
   sku: {
-    name: 'Standard'
+    name: embeddingSkuName
     capacity: embeddingCapacity
   }
   properties: {
@@ -157,7 +197,11 @@ output docIntelName string = docIntel.name
 output docIntelEndpoint string = docIntel.properties.endpoint
 output searchName string = search.name
 output searchEndpoint string = 'https://${search.name}.search.windows.net'
-output openaiName string = openai.name
-output openaiEndpoint string = openai.properties.endpoint
+output foundryName string = foundry.name
+output foundryEndpoint string = foundry.properties.endpoint
+output foundryProjectName string = foundryProject.name
+// The Foundry project exposes a dictionary of endpoints. The "AI Foundry API"
+// key is the unified agent/inference endpoint introduced at Ignite 2025.
+output foundryProjectEndpoint string = foundryProject.properties.endpoints['AI Foundry API']
 output openaiChatDeployment string = chatDeployment.name
 output openaiEmbeddingDeployment string = embeddingDeployment.name

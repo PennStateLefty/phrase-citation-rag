@@ -3,40 +3,84 @@
 # local .env with endpoints + keys. Idempotent: re-running updates the
 # existing resources and refreshes .env.
 #
+# Usage:
+#   ./infra/deploy.sh [--region REGION] [--rg NAME] [--prefix PREFIX] [--search-sku SKU]
+#
+# Env vars also honored (flags win):
+#   RG          (default: rg-phrase-citation-testing)
+#   LOCATION    (default: swedencentral)
+#   NAME_PREFIX (default: sentcite)
+#   SEARCH_SKU  (default: unset -> Bicep default 'standard')
+#
 # Requires: az CLI logged in (`az login`) to a subscription with Azure
-# OpenAI access in the target region.
+# OpenAI + Foundry access in the target region.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$HERE/.." && pwd)"
 
-: "${RG:=rg-sentcite-dev}"
-: "${LOCATION:=eastus2}"
+: "${RG:=rg-phrase-citation-testing}"
+: "${LOCATION:=swedencentral}"
 : "${NAME_PREFIX:=sentcite}"
+: "${SEARCH_SKU:=}"
+# Tag that bypasses mutating subscription policies (notably one that forces
+# disableLocalAuth=true on new Foundry/CognitiveServices accounts).
+: "${RG_TAGS:=SecurityControl=Ignore}"
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --region|--location) LOCATION="$2"; shift 2 ;;
+    --rg) RG="$2"; shift 2 ;;
+    --prefix) NAME_PREFIX="$2"; shift 2 ;;
+    --search-sku) SEARCH_SKU="$2"; shift 2 ;;
+    -h|--help)
+      sed -n '2,16p' "$0"; exit 0 ;;
+    *)
+      echo "Unknown argument: $1" >&2; exit 2 ;;
+  esac
+done
 
 echo "==> Resource group:  $RG"
 echo "==> Location:        $LOCATION"
 echo "==> Name prefix:     $NAME_PREFIX"
+[[ -n "$SEARCH_SKU" ]] && echo "==> Search SKU:      $SEARCH_SKU"
 
 az account show -o none >/dev/null 2>&1 || {
   echo "Not logged in. Run: az login" >&2
   exit 1
 }
 
-az group create -n "$RG" -l "$LOCATION" -o none
+# Pin subscription for the rest of this script to avoid surprises from a
+# globally-changed default sub between commands.
+if [[ -z "${AZURE_SUBSCRIPTION_ID:-}" ]]; then
+  AZURE_SUBSCRIPTION_ID=$(az account show --query id -o tsv)
+fi
+AZ_COMMON=(--subscription "$AZURE_SUBSCRIPTION_ID")
+echo "==> Subscription:    $AZURE_SUBSCRIPTION_ID"
+
+az "${AZ_COMMON[@]}" group create -n "$RG" -l "$LOCATION" --tags $RG_TAGS -o none
 
 DEPLOY_NAME="sentcite-$(date +%s)"
 echo "==> Starting deployment $DEPLOY_NAME"
-az deployment group create \
+
+PARAMS=(namePrefix="$NAME_PREFIX" location="$LOCATION")
+[[ -n "$SEARCH_SKU" ]] && PARAMS+=(searchSku="$SEARCH_SKU")
+
+az "${AZ_COMMON[@]}" deployment group create \
   -g "$RG" \
   -n "$DEPLOY_NAME" \
   --template-file "$HERE/main.bicep" \
-  --parameters namePrefix="$NAME_PREFIX" location="$LOCATION" \
+  --parameters "${PARAMS[@]}" \
   -o none
 
 get_out() {
-  az deployment group show -g "$RG" -n "$DEPLOY_NAME" \
-    --query "properties.outputs.$1.value" -o tsv
+  for i in 1 2 3 4 5 6; do
+    val=$(az "${AZ_COMMON[@]}" deployment group show -g "$RG" -n "$DEPLOY_NAME" \
+      --query "properties.outputs.$1.value" -o tsv 2>/dev/null) && [[ -n "$val" ]] && { echo "$val"; return 0; }
+    sleep 5
+  done
+  echo "Failed to read output '$1' from deployment $DEPLOY_NAME" >&2
+  return 1
 }
 
 STORAGE=$(get_out storageAccountName)
@@ -44,16 +88,18 @@ DOCINTEL_NAME=$(get_out docIntelName)
 DOCINTEL_ENDPOINT=$(get_out docIntelEndpoint)
 SEARCH_NAME=$(get_out searchName)
 SEARCH_ENDPOINT=$(get_out searchEndpoint)
-OPENAI_NAME=$(get_out openaiName)
-OPENAI_ENDPOINT=$(get_out openaiEndpoint)
+FOUNDRY_NAME=$(get_out foundryName)
+FOUNDRY_ENDPOINT=$(get_out foundryEndpoint)
+FOUNDRY_PROJECT_NAME=$(get_out foundryProjectName)
+FOUNDRY_PROJECT_ENDPOINT=$(get_out foundryProjectEndpoint)
 CHAT_DEPLOY=$(get_out openaiChatDeployment)
 EMBED_DEPLOY=$(get_out openaiEmbeddingDeployment)
 
 echo "==> Fetching keys"
-DOCINTEL_KEY=$(az cognitiveservices account keys list -g "$RG" -n "$DOCINTEL_NAME" --query key1 -o tsv)
-OPENAI_KEY=$(az cognitiveservices account keys list -g "$RG" -n "$OPENAI_NAME" --query key1 -o tsv)
-SEARCH_KEY=$(az search admin-key show -g "$RG" --service-name "$SEARCH_NAME" --query primaryKey -o tsv)
-STORAGE_CS=$(az storage account show-connection-string -g "$RG" -n "$STORAGE" --query connectionString -o tsv)
+DOCINTEL_KEY=$(az "${AZ_COMMON[@]}" cognitiveservices account keys list -g "$RG" -n "$DOCINTEL_NAME" --query key1 -o tsv)
+FOUNDRY_KEY=$(az "${AZ_COMMON[@]}" cognitiveservices account keys list -g "$RG" -n "$FOUNDRY_NAME" --query key1 -o tsv)
+SEARCH_KEY=$(az "${AZ_COMMON[@]}" search admin-key show -g "$RG" --service-name "$SEARCH_NAME" --query primaryKey -o tsv)
+STORAGE_CS=$(az "${AZ_COMMON[@]}" storage account show-connection-string -g "$RG" -n "$STORAGE" --query connectionString -o tsv)
 
 ENV_FILE="$REPO_ROOT/.env"
 if [ -f "$ENV_FILE" ]; then
@@ -78,11 +124,32 @@ AZURE_SEARCH_API_KEY=$SEARCH_KEY
 AZURE_SEARCH_INDEX_CHUNKS=tax-chunks
 AZURE_SEARCH_INDEX_SENTENCES=tax-sentences
 
-AZURE_OPENAI_ENDPOINT=$OPENAI_ENDPOINT
-AZURE_OPENAI_API_KEY=$OPENAI_KEY
+# Foundry / Azure OpenAI (RAG generator role)
+AZURE_FOUNDRY_NAME=$FOUNDRY_NAME
+AZURE_FOUNDRY_ENDPOINT=$FOUNDRY_ENDPOINT
+AZURE_FOUNDRY_API_KEY=$FOUNDRY_KEY
+AZURE_FOUNDRY_PROJECT_NAME=$FOUNDRY_PROJECT_NAME
+AZURE_FOUNDRY_PROJECT_ENDPOINT=$FOUNDRY_PROJECT_ENDPOINT
 AZURE_OPENAI_API_VERSION=2024-10-21
 AZURE_OPENAI_CHAT_DEPLOYMENT=$CHAT_DEPLOY
 AZURE_OPENAI_EMBEDDING_DEPLOYMENT=$EMBED_DEPLOY
+
+# Synth-GT author role — fill in after click-deploying a non-OpenAI-family
+# model (e.g. Llama-3.3-70B-Instruct, Mistral-Large-2411) from the Foundry
+# portal model catalog into the project above. Must be a distinct model
+# family from the RAG generator and the judge.
+FOUNDRY_SYNTH_GT_ENDPOINT=
+FOUNDRY_SYNTH_GT_API_KEY=
+FOUNDRY_SYNTH_GT_DEPLOYMENT=
+FOUNDRY_SYNTH_GT_MODEL=
+
+# Judge role — fill in after click-deploying a third model family
+# (e.g. DeepSeek-V3, Phi-4, Cohere Command R+). Must be distinct from
+# both the RAG generator and the synth-GT author.
+FOUNDRY_JUDGE_ENDPOINT=
+FOUNDRY_JUDGE_API_KEY=
+FOUNDRY_JUDGE_DEPLOYMENT=
+FOUNDRY_JUDGE_MODEL=
 EOF
 chmod 600 "$ENV_FILE"
 
@@ -91,6 +158,12 @@ echo "Deployment complete. Wrote $ENV_FILE"
 echo "  Storage:          $STORAGE"
 echo "  Doc Intelligence: $DOCINTEL_NAME  ($DOCINTEL_ENDPOINT)"
 echo "  AI Search:        $SEARCH_NAME    ($SEARCH_ENDPOINT)"
-echo "  Azure OpenAI:     $OPENAI_NAME    ($OPENAI_ENDPOINT)"
+echo "  Foundry (AIServ): $FOUNDRY_NAME   ($FOUNDRY_ENDPOINT)"
+echo "  Foundry project:  $FOUNDRY_PROJECT_NAME  ($FOUNDRY_PROJECT_ENDPOINT)"
 echo "    chat:           $CHAT_DEPLOY"
 echo "    embedding:      $EMBED_DEPLOY"
+echo ""
+echo "Next: open the Foundry portal and deploy two non-OpenAI-family"
+echo "models (e.g. Llama-3.3-70B-Instruct and DeepSeek-V3) from the"
+echo "Model Catalog into project '$FOUNDRY_PROJECT_NAME', then populate"
+echo "FOUNDRY_SYNTH_GT_* and FOUNDRY_JUDGE_* in $ENV_FILE."
