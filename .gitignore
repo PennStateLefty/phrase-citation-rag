@@ -26,3 +26,6 @@ data/ground_truth/synthetic/*
 *.log
 dist/
 build/
+
+data/eval/*
+!data/eval/.gitkeep
