@@ -96,6 +96,18 @@ class GroundTruthItem(BaseModel):
     document_id: str | None = None
     page: NonNegativeInt | None = None
     section_path: list[str] = Field(default_factory=list)
+    # Quality-gate verdict (populated by sentcite.quality_gates.run_quality_gates).
+    # Items that didn't pass are *kept* with flags set to False so callers
+    # can audit drop reasons; eval code should filter on both booleans.
+    judge_model: str | None = None
+    judge_well_formed: bool | None = None
+    judge_supported: bool | None = None
+    judge_reasons: str | None = None
+    # Union-labeler additions — extra corpus sentence_ids that independently
+    # support the gold answer (reduces false-negative recall). These are
+    # merged into every per-answer-sentence list in gold_citations so the
+    # default recall calculation benefits automatically.
+    union_additions: list[str] = Field(default_factory=list)
 
 
 class EvalResult(BaseModel):
