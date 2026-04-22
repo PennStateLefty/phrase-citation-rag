@@ -1,0 +1,19 @@
+{
+  "run_id": "notebook-cache-synth",
+  "source_run": "phase1a-100",
+  "source_items_path": "data/ground_truth/synthetic/phase1a-100/items.jsonl",
+  "filter": "subset matching question_ids in data/eval/smoke-eval/items.jsonl",
+  "total_items": 5,
+  "difficulty_counts": {
+    "easy": 3,
+    "medium": 2,
+    "hard": 0
+  },
+  "documents": [
+    "irs_pub_17",
+    "irs_pub_463",
+    "irs_pub_544",
+    "irs_pub_583",
+    "irs_pub_587"
+  ]
+}

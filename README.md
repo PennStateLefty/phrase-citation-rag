@@ -68,6 +68,25 @@ docs/               design notes, failure-mode reviews, index-projection eval
 research/           upstream Copilot Researcher outputs (reference only)
 ```
 
+## Jupyter walkthroughs
+
+Two notebook series live under `notebooks/`:
+
+- **Technical series** (`00` – `05b`) — runs the real pipeline against
+  live Azure; requires `.env` + provisioned infra.
+- **Demo series** (`demo_01` – `demo_03`) — **no Azure required**.
+  Reads from the committed `data/notebook_cache/` bundle, so a fresh
+  venv is enough. Use this for customer screenshares and async
+  reviewers.
+
+```bash
+source .venv/bin/activate && jupyter lab
+# then pick the "Python (sentcite .venv)" kernel
+```
+
+See [`docs/notebooks.md`](docs/notebooks.md) for the full index,
+per-notebook descriptions, and prerequisites.
+
 ## Two citation strategies (compared side-by-side in eval)
 
 - **Strategy A — Inline-prompted:** GPT-4o emits `[s_<sentence_id>]` tags

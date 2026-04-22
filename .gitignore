@@ -29,3 +29,8 @@ build/
 
 data/eval/*
 !data/eval/.gitkeep
+
+# Committed notebook/demo artifact cache — small, self-contained slice.
+# Keep this AFTER the data/*/* exclusions above so it takes effect.
+!data/notebook_cache/
+!data/notebook_cache/**

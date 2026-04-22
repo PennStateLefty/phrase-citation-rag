@@ -16,6 +16,14 @@ nav_order: 1
 
 ---
 
+{: .tip }
+> **Walk through it yourself.** Every stage described below has a
+> corresponding notebook — see the full
+> [notebook index]({{ '/notebooks/' | relative_url }}). If you are
+> not an engineer, start with
+> [`demo_02_pipeline_tour.ipynb`](https://github.com/PennStateLefty/phrase-citation-rag/blob/main/notebooks/demo_02_pipeline_tour.ipynb);
+> it runs from a cached bundle so no Azure setup is required.
+
 ## Why this prototype exists
 
 Tax auditors are trained to **show their work**. Every determination
