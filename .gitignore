@@ -30,6 +30,9 @@ build/
 data/eval/*
 !data/eval/.gitkeep
 
+# Accidental writes from notebooks executed with CWD=notebooks/
+notebooks/data/
+
 # Committed notebook/demo artifact cache — small, self-contained slice.
 # Keep this AFTER the data/*/* exclusions above so it takes effect.
 !data/notebook_cache/
