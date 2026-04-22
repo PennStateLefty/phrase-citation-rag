@@ -60,6 +60,7 @@ from .cite_align import DEFAULT_TAU, DEFAULT_TOPK, cite_answer
 from .config import AzureConfig
 from .generate import generate
 from .judge import FaithfulnessReport, judge_faithfulness
+from .layperson_review import LaypersonReview, summarize_reviews
 from .llm import get_binding, get_client
 from .retrieval import Mode, RetrievalResult, retrieve
 from .schema import CitedAnswer, GroundTruthItem
@@ -177,6 +178,12 @@ class ItemEval:
     # recorded with zero scores and this field non-empty so roll-ups
     # can separate signal from platform-noise.
     error: str | None = None
+    # Layperson review metadata (non-SME). Surfaced in aggregates and
+    # markdown so readers don't conflate it with domain validation.
+    reviewer_confidence: Literal["high", "medium", "low"] | None = None
+    reviewer_role: str | None = None
+    reviewer_flags: tuple[str, ...] = ()
+    reviewer_notes: str = ""
 
     def to_dict(self) -> dict:
         d = {
@@ -209,6 +216,11 @@ class ItemEval:
             )
         if self.error is not None:
             d["error"] = self.error
+        if self.reviewer_confidence is not None:
+            d["reviewer_confidence"] = self.reviewer_confidence
+            d["reviewer_role"] = self.reviewer_role
+            d["reviewer_flags"] = list(self.reviewer_flags)
+            d["reviewer_notes"] = self.reviewer_notes
         return d
 
 
@@ -227,6 +239,11 @@ class StrategyEvalSummary:
     # Optional enrichments.
     macro_percent_faithful: float | None = None
     macro_stability: float | None = None
+    # Non-SME reviewer buckets. Maps confidence → {"n","f1","precision",
+    # "recall","coverage"}. Only populated when reviews are stitched in.
+    by_reviewer_confidence: dict[str, dict[str, float]] = field(
+        default_factory=dict
+    )
 
     def to_summary(self) -> dict:
         return {
@@ -253,6 +270,10 @@ class StrategyEvalSummary:
                 if self.macro_stability is not None
                 else None
             ),
+            "by_reviewer_confidence": {
+                k: {kk: round(vv, 4) for kk, vv in v.items()}
+                for k, v in self.by_reviewer_confidence.items()
+            },
         }
 
 
@@ -270,6 +291,9 @@ class EvalReport:
     started_at: str
     finished_at: str
     elapsed_seconds: float
+    # Optional: layperson review coverage summary (counts by confidence,
+    # top flags). Populated when reviews are passed to evaluate_gt_set.
+    reviews_summary: dict | None = None
 
     def to_summary(self) -> dict:
         return {
@@ -287,6 +311,7 @@ class EvalReport:
             "strategies": {
                 k: v.to_summary() for k, v in self.strategies.items()
             },
+            "reviews_summary": self.reviews_summary,
         }
 
     def to_markdown_table(self) -> str:
@@ -331,6 +356,43 @@ class EvalReport:
                 bd = self.strategies[s].by_difficulty.get(diff)
                 cells.append(f"{bd['f1']:.3f} (n={int(bd['n'])})" if bd else "n/a")
             rows.append("| " + " | ".join(cells) + " |")
+
+        # Reviewer-confidence slice (non-SME). Only render when at least
+        # one strategy has any reviewer-tagged items, so unreviewed runs
+        # don't clutter the report.
+        any_reviewed = any(
+            self.strategies[s].by_reviewer_confidence for s in strategies
+        )
+        if any_reviewed:
+            rows.append("")
+            rows.append("### F1 by reviewer confidence (non-SME)")
+            rows.append("")
+            rows.append(
+                "_Layperson (ML Eng / PM) spot-check only. Not a "
+                "substitute for SME validation._"
+            )
+            rows.append("")
+            hdr = ["Confidence"] + strategies
+            rows.append("| " + " | ".join(hdr) + " |")
+            rows.append("| " + " | ".join(["---"] * len(hdr)) + " |")
+            for conf in ("high", "medium", "low"):
+                cells = [conf]
+                for s in strategies:
+                    br = self.strategies[s].by_reviewer_confidence.get(conf)
+                    cells.append(
+                        f"{br['f1']:.3f} (n={int(br['n'])})" if br else "n/a"
+                    )
+                rows.append("| " + " | ".join(cells) + " |")
+            if self.reviews_summary:
+                total = self.reviews_summary.get("total", 0)
+                flags = self.reviews_summary.get("flag_counts", {})
+                rows.append("")
+                rows.append(f"Reviewed items: **{total}**")
+                if flags:
+                    rows.append("")
+                    rows.append("Top reviewer flags:")
+                    for name, count in list(flags.items())[:5]:
+                        rows.append(f"- `{name}`: {count}")
 
         return "\n".join(rows)
 
@@ -403,6 +465,21 @@ def summarize_strategy(
     faith_vals = [i.faithfulness.percent_faithful for i in items if i.faithfulness]
     stab_vals = [i.stability.stability for i in items if i.stability]
 
+    # Non-SME reviewer buckets.
+    by_reviewer: dict[str, list[ItemEval]] = defaultdict(list)
+    for it in items:
+        if it.reviewer_confidence is not None:
+            by_reviewer[it.reviewer_confidence].append(it)
+    by_reviewer_summary: dict[str, dict[str, float]] = {}
+    for conf, bucket in by_reviewer.items():
+        by_reviewer_summary[conf] = {
+            "n": float(len(bucket)),
+            "precision": _mean(i.precision for i in bucket),
+            "recall": _mean(i.recall for i in bucket),
+            "f1": _mean(i.f1 for i in bucket),
+            "coverage": _mean(i.coverage for i in bucket),
+        }
+
     return StrategyEvalSummary(
         strategy=strategy,
         items=items,
@@ -414,6 +491,7 @@ def summarize_strategy(
         by_difficulty=by_difficulty,
         macro_percent_faithful=(_mean(faith_vals) if faith_vals else None),
         macro_stability=(_mean(stab_vals) if stab_vals else None),
+        by_reviewer_confidence=by_reviewer_summary,
     )
 
 
@@ -438,6 +516,7 @@ def evaluate_gt_set(
     cfg: AzureConfig | None = None,
     client: ChatCompletionsClient | None = None,
     on_progress=None,
+    reviews: dict[str, LaypersonReview] | None = None,
 ) -> EvalReport:
     """Run every item under every strategy and aggregate.
 
@@ -542,6 +621,20 @@ def evaluate_gt_set(
         if on_progress is not None:
             on_progress(idx + 1, len(gt_items), items_per_strategy)
 
+    # Stamp reviewer metadata onto each ItemEval so summaries can slice
+    # by reviewer_confidence. Non-destructive — items without a matching
+    # review stay unchanged.
+    if reviews:
+        for strat in strategies:
+            for it in items_per_strategy[strat]:
+                rev = reviews.get(it.question_id)
+                if rev is None:
+                    continue
+                it.reviewer_confidence = rev.confidence
+                it.reviewer_role = rev.reviewer_role
+                it.reviewer_flags = tuple(rev.flags)
+                it.reviewer_notes = rev.notes
+
     summaries: dict[Strategy, StrategyEvalSummary] = {
         s: summarize_strategy(items_per_strategy[s], s) for s in strategies
     }
@@ -560,6 +653,7 @@ def evaluate_gt_set(
         started_at=started.isoformat(),
         finished_at=finished.isoformat(),
         elapsed_seconds=time.perf_counter() - t0,
+        reviews_summary=(summarize_reviews(reviews) if reviews else None),
     )
 
 

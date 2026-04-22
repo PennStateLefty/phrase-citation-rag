@@ -29,6 +29,7 @@ if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
 from sentcite.eval import evaluate_gt_set, write_eval_report  # noqa: E402
+from sentcite.layperson_review import load_reviews  # noqa: E402
 from sentcite.schema import GroundTruthItem  # noqa: E402
 
 
@@ -73,6 +74,8 @@ def main() -> None:
                     help="Also measure citation stability (adds N extra gen/cite calls per item).")
     ap.add_argument("--consistency-runs", type=int, default=5)
     ap.add_argument("--consistency-temperature", type=float, default=0.7)
+    ap.add_argument("--reviews", type=Path, default=None,
+                    help="Path to layperson reviews.jsonl (non-SME spot-check).")
     args = ap.parse_args()
 
     items = load_gt(args.gt, only_passing=args.only_passing)
@@ -86,6 +89,11 @@ def main() -> None:
     print(f"Strategies: {args.strategies}")
     print(f"Enrichments: faithfulness={args.include_faithfulness} "
           f"self_consistency={args.include_self_consistency}")
+
+    reviews = None
+    if args.reviews:
+        reviews = load_reviews(args.reviews)
+        print(f"Loaded {len(reviews)} layperson reviews from {args.reviews}")
 
     def _progress(i: int, n: int, buckets) -> None:
         print(f"  [{i}/{n}] done", flush=True)
@@ -103,6 +111,7 @@ def main() -> None:
         consistency_runs=args.consistency_runs,
         consistency_temperature=args.consistency_temperature,
         on_progress=_progress,
+        reviews=reviews,
     )
 
     paths = write_eval_report(report, out_dir=args.out, run_id=args.run_id)
