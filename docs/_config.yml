@@ -3,6 +3,10 @@ description: >-
   Phase-1 prototype demonstrating sentence-level citations for a
   retrieval-augmented-generation pipeline over tax-auditing documents.
 
+# Pretty URLs so /phase-1a/results/ resolves (matches the links emitted
+# by `relative_url` filter throughout the site).
+permalink: pretty
+
 remote_theme: just-the-docs/just-the-docs
 
 # just-the-docs settings
