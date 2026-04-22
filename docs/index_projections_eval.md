@@ -1,3 +1,10 @@
+---
+title: Index Projections Eval
+layout: default
+nav_order: 4
+permalink: /index-projections-eval/
+---
+
 # Index Layout Spike — Layout X vs Layout Y
 
 **Status:** complete (qualitative). Formal recall@k against synthetic GT

@@ -1,0 +1,48 @@
+title: Sentence-Citation RAG Prototype
+description: >-
+  Phase-1 prototype demonstrating sentence-level citations for a
+  retrieval-augmented-generation pipeline over tax-auditing documents.
+
+remote_theme: just-the-docs/just-the-docs
+
+# just-the-docs settings
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  "View on GitHub":
+    - "https://github.com/"
+
+# Navigation
+nav_external_links: []
+
+# Callouts used in pages
+callouts:
+  important:
+    title: Important
+    color: red
+  note:
+    title: Note
+    color: blue
+  tip:
+    title: Tip
+    color: green
+  non-sme:
+    title: Non-SME
+    color: yellow
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Don't render the python/data tree as site content
+exclude:
+  - "../src/"
+  - "../tests/"
+  - "../data/"
+  - "../scripts/"
+  - "../notebooks/"
+  - "../research/"
+  - "../infra/"
+  - "../.venv/"
