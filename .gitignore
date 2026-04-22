@@ -18,6 +18,8 @@ data/chunks/*
 !data/chunks/.gitkeep
 data/ground_truth/results/*
 !data/ground_truth/results/.gitkeep
+data/ground_truth/synthetic/*
+!data/ground_truth/synthetic/.gitkeep
 
 # Local artifacts
 .DS_Store

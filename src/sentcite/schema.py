@@ -85,6 +85,17 @@ class GroundTruthItem(BaseModel):
     # For each sentence in gold_answer (0-indexed), the set of supporting
     # source sentence_ids.
     gold_citations: list[list[str]]
+    # Provenance — set for synthetic GT so eval runs can audit which model
+    # authored which item and never accidentally report contaminated numbers.
+    author_model: str | None = None
+    source_span_sentence_ids: list[str] = Field(
+        default_factory=list,
+        description="The span of source sentence_ids used to seed this item "
+        "(attribution-first: the gold citations are the span, by construction).",
+    )
+    document_id: str | None = None
+    page: NonNegativeInt | None = None
+    section_path: list[str] = Field(default_factory=list)
 
 
 class EvalResult(BaseModel):
